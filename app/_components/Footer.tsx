@@ -36,7 +36,7 @@ const LINKS = [
         title: "Fundraise",
         subLinks: [
             {
-                title: "How to start a FundDreams",
+                title: "How to start a FundDreamz",
                 href: ""
             },
             {
@@ -65,11 +65,11 @@ const LINKS = [
         title: "About",
         subLinks: [
             {
-                title: "How FundDreams works",
+                title: "How FundDreamz works",
                 href: ""
             },
             {
-                title: "FundDreams Giving Guarantee",
+                title: "FundDreamz Giving Guarantee",
                 href: ""
             },
             {
@@ -90,7 +90,7 @@ const LINKS = [
         title: "",
         subLinks: [
             {
-                title: "About FundDreams and Classy",
+                title: "About FundDreamz and Classy",
                 href: ""
             },
             {
@@ -102,11 +102,11 @@ const LINKS = [
                 href: ""
             },
             {
-                title: "FundDreams.org",
+                title: "FundDreamz.org",
                 href: ""
             },
             {
-                title: "FundDreams Partnerships",
+                title: "FundDreamz Partnerships",
                 href: ""
             },
         ]
@@ -139,7 +139,7 @@ const RESOURCES = [
         href: "/"
     },
     {
-        title: "Why GoFundMe",
+        title: "Why FundDreamz",
         href: "/"
     },
     {
