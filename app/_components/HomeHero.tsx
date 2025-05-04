@@ -67,8 +67,8 @@ export default function HomeHero() {
         <section className="px-4 sm:px-6 md:px-10">
             <div className="mx-auto max-w-lg pt-12 md:pt-0 md:min-h-screen flex flex-col-reverse lg:flex-row lg:gap-20">
                 <div className="flex flex-col items-center lg:items-start justify-center">
-                    <h1 className="md:max-w-[12ch] text-3xl sm:text-[3rem] md:text-[4rem] text-center lg:text-left leading-[2.4rem] sm:leading-[3.6rem] md:leading-[4.6rem]">Successful <br className="block md:hidden" />fundraisers start here.</h1>
-                    <p className="mt-4 text-center lg:text-left text-sm sm:text-base lg:text-lg max-w-[40ch]">Get started in just a few minutes — with helpful new tools, it's easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
+                    <h1 className="md:max-w-[12ch] text-3xl sm:text-[3rem] md:text-[4rem] text-center lg:text-left leading-[2.4rem] sm:leading-[3.6rem] md:leading-[4.6rem] font-semibold tracking-tighter">Successful <br className="block md:hidden" />fundraisers start here.</h1>
+                    <p className="mt-4 text-center lg:text-left text-sm sm:text-base lg:text-lg max-w-[40ch]">Get started in just a few minutes — with helpful new tools, it&apos;s easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
                     <button className="mt-8 h-10 sm:h-12 rounded-full px-6 sm:px-10 bg-main text-white w-fit min-w-50 sm:min-w-60">
                         <span className="text-sm font-semibold whitespace-nowrap">Start a fundraiser</span>
                     </button>

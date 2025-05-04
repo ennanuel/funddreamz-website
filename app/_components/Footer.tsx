@@ -300,7 +300,7 @@ export default function Footer() {
                         <p className="text-sm px-2">©{(new Date).getFullYear()} FundDreamz</p>
                         {
                             LEGALS.map(({ title, href }) => (
-                                <Link href={href} className="h-8 flex items-center justify-center px-2 rounded-lg hover:bg-gray-100/50">
+                                <Link key={title} href={href} className="h-8 flex items-center justify-center px-2 rounded-lg hover:bg-gray-100/50">
                                     <span className="text-sm whitespace-nowrap">{title}</span>
                                 </Link>
                             ))

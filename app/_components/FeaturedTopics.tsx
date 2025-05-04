@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { SlArrowRight } from "react-icons/sl"
 
@@ -36,7 +37,8 @@ export default function FeaturedTopics() {
                 <h2 className="font-semibold text-lg sm:text-xl md:text-2xl">Featured topics</h2>
                 <div className="mt-6 group flex flex-col md:flex-row bg-gray-100/50 rounded-xl overflow-hidden">
                     <div className="relative p-4 flex-1 w-full aspect-square md:aspect-auto max-h-[320px] bg-gray-100">
-                        <span className="w-fit flex items-center justify-center h-6 rounded-full bg-light-purple text-purple-700 px-3">
+                        <Image src="/home/Charity.jpg" alt={TOPICS[0].title} fill className="object-cover" />
+                        <span className="relative w-fit flex items-center justify-center h-6 rounded-full bg-light-purple text-purple-700 px-3">
                             <span className="text-xs font-semibold">Urgent cause</span>
                         </span>
                     </div>
@@ -51,9 +53,10 @@ export default function FeaturedTopics() {
                 </div>
                 <div className="mt-6 gap-6 hidden md:grid grid-cols-3">
                     {
-                        TOPICS.slice(1,).map(({ title, cta, image }) => (
+                        TOPICS.slice(1,).map(({ title, cta }) => (
                             <Link href="/" key={title} className="group flex flex-col rounded-xl overflow-hidden bg-gray-100/50">
                                 <div className="relative h-50 p-4 bg-gray-100">
+                                    <Image src="/home/Charity.jpg" alt={title} fill className="object-cover" />
                                     <span className="w-fit flex items-center justify-center h-6 rounded-full bg-light-purple text-purple-700 px-3">
                                         <span className="text-xs font-semibold">Urgent cause</span>
                                     </span>

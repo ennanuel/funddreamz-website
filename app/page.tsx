@@ -11,7 +11,7 @@ import Tips from "./_components/Tips";
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-cal">
       <HomeHero />
       <Stats />
       <QuickDemo />

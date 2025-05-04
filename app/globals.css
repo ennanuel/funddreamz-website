@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -22,7 +21,6 @@
   --color-light-purple: #f0d8fe;
   --color-dark-purple: #691d94;
 
-  --font-cal: 'Cal Sans', Arial;
   --font-dm: var(--font-dm-sans);
   --font-inter: var(--font-inter);
   --font-montserrat: var(--font-montserrat);
@@ -51,10 +49,4 @@ h1, h2, h3, h4, h5, h6 {
 
 p, input, textarea {
   @apply text-gray-600;
-}
-
-.vertical-text {
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  text-align: left;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import { Inter, DM_Sans, Montserrat } from "next/font/google";
 
 import Header from "./_components/Header";
 
@@ -10,6 +10,11 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"]
+})
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${dmSans.variable} antialiased font-cal`}
+        className={`${inter.variable} ${dmSans.variable} ${montserrat.variable} antialiased font-montserrat`}
       > 
         <Header />
         {children}

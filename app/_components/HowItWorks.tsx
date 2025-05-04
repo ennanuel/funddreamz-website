@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { HiOutlinePlay } from "react-icons/hi2";
 
@@ -15,8 +16,9 @@ export default function HowItWorks() {
                         <span className="text-sm font-semibold whitespace-nowrap">Learn more</span>
                     </Link>
                 </div>
-                <div className="mt-10 mx-auto relative overflow-hidden bg-light-green rounded-3xl w-full max-h-[560px] aspect-video flex items-center justify-center">
-                    <button className="flex items-center justify-center px-4 sm:px-6 gap-2 rounded-2xl h-10 sm:h-14 min-w-14 bg-white shadow-lg shadow-black/10 hover:bg-main hover:text-white">
+                <div className="telative mt-10 mx-auto relative overflow-hidden bg-light-green rounded-3xl w-full max-h-[560px] aspect-video flex items-center justify-center">
+                    <Image src="/home/video-image.jpg" fill alt="Video image" className="object-cover" />
+                    <button className="relative flex items-center justify-center px-4 sm:px-6 gap-2 rounded-2xl h-10 sm:h-14 min-w-14 bg-white shadow-lg shadow-black/10 hover:bg-main hover:text-white">
                         <HiOutlinePlay size={18} />
                         <span className="font-semibold text-xs sm:text-sm">Play video</span>
                     </button>
