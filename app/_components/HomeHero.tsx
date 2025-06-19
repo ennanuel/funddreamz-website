@@ -1,65 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { AiFillSafetyCertificate } from "react-icons/ai"
-import { FaHandshake } from "react-icons/fa6"
-import { GiAfrica } from "react-icons/gi"
-import { HiOutlineArrowUpRight } from "react-icons/hi2"
+import { HiOutlineArrowUpRight } from "react-icons/hi2";
+import { BADGES, CATEGORIES } from "../assets/data";
 
-
-const BADGES = [
-    {
-        title: "Transparent",
-        Icon: AiFillSafetyCertificate
-    },
-    {
-        title: "Trustworthy",
-        Icon: FaHandshake
-    },
-    {
-        title: "For Africa",
-        Icon: GiAfrica
-    },
-]
-
-const CATEGORIES = [
-    {
-        title: "Your cause",
-        href: "/your-cause",
-        description: "",
-        image: "/home/your-cause2.jpg"
-    },
-    {
-        title: "Emergency",
-        href: "/emergency",
-        description: "",
-        image: "/home/emergency2.jpg"
-    },
-    {
-        title: "Medical",
-        href: "/medical",
-        description: "",
-        image: "/home/emergency3.jpg"
-    },
-    {
-        title: "Business",
-        href: "/business",
-        description: "",
-        image: "/home/business2.jpg"
-    },
-    {
-        title: "Education",
-        href: "/education",
-        description: "",
-        image: "/home/education1.jpg"
-    },
-    {
-        title: "Animal",
-        href: "/animal",
-        description: "",
-        image: "/home/animals1.jpg"
-    },
-]
 
 export default function HomeHero() {
 

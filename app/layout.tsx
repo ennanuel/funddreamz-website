@@ -36,9 +36,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSans.variable} ${montserrat.variable} antialiased font-montserrat`}
       > 
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

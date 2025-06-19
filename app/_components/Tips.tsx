@@ -1,22 +1,6 @@
 import Link from "next/link";
-import { HiArrowRight, HiOutlineLightBulb, HiOutlinePencil } from "react-icons/hi2";
-import { PiHandHeartLight } from "react-icons/pi";
-
-
-const TIPS = [
-    {
-        title: "Top tips for your GoFundMe fundraiser",
-        Icon: HiOutlineLightBulb
-    },
-    {
-        title: "Tips for telling a great fundraiser story",
-        Icon: HiOutlinePencil
-    },
-    {
-        title: "Tips for sharing your fundraiser",
-        Icon: PiHandHeartLight
-    },
-];
+import { HiArrowRight } from "react-icons/hi2";
+import { TIPS } from "../assets/data";
 
 export default function Tips() {
 

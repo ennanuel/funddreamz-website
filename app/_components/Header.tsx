@@ -3,24 +3,8 @@ import { BiSearch } from "react-icons/bi";
 import { GoTriangleDown } from "react-icons/go";
 import { PiPlantFill } from "react-icons/pi";
 import { RiMenu5Line } from "react-icons/ri";
+import { LINKS } from "../assets/data";
 
-const LINKS = [
-    {
-        title: "Donate",
-        href: "/donate",
-        subLinks: []
-    },
-    {
-        title: "Fundraise",
-        href: "/fundraise",
-        subLinks: []
-    },
-    {
-        title: "About",
-        href: "/about",
-        subLinks: null
-    },
-];
 
 export default function Header() {
 

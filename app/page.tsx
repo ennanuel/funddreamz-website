@@ -8,10 +8,13 @@ import HowItWorks from "./_components/HowItWorks";
 import Description2 from "./_components/Description2";
 import Categories from "./_components/Categories";
 import Tips from "./_components/Tips";
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-cal">
+    <div className="">
+      <Header />
       <HomeHero />
       <Stats />
       <QuickDemo />
@@ -22,6 +25,7 @@ export default function Home() {
       <Description2 />
       <Categories />
       <Tips />
+      <Footer />
     </div>
   );
 }

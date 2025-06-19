@@ -2,45 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 import { SlArrowDown } from "react-icons/sl";
+import { FUNDRAISERS } from "../assets/data";
 
-
-const FUNDRAISERS = [
-    {
-        title: "Support Shyam's Life-Saving Heart surgery & recovery.",
-        image: "/home/your-cause1.jpg",
-        donations: "2.2K",
-        amountRaised: "117,853",
-        currency: "$"
-    },
-    {
-        title: "Raising funds for Callum’s brain tumour treatment.",
-        image: "/home/business1.jpg",
-        donations: "4.4K",
-        amountRaised: "118,704",
-        currency: "£"
-    },
-    {
-        title: "Sven kämpft um sein Leben - gegen den Krebs.",
-        image: "/home/emergency1.jpg",
-        donations: "2.1K",
-        amountRaised: "73,379",
-        currency: "€"
-    },
-    {
-        title: "Let's Help Get Jeff Off The Streets!",
-        image: "/home/agriculture2.jpg",
-        donations: "5.7K",
-        amountRaised: "111,017",
-        currency: "$"
-    },
-    {
-        title: "Support for Roland Nulada and his family",
-        image: "/home/agriculture3.jpg",
-        donations: "3.6K",
-        amountRaised: "137,513",
-        currency: "$"
-    }
-]
 
 
 export default function DiscoverFundraisers() {

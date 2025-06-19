@@ -1,33 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { SlArrowRight } from "react-icons/sl"
+import Image from "next/image";
+import Link from "next/link";
 
-const TOPICS = [
-    {
-        title: "How to Help: FSU Shooting Relief",
-        description: "On April 17, many people were killed and injured at FSU in Tallahassee. Donate to verified fundraisers today to help the people and families affected.",
-        cta: "Donate now",
-        image: ""
-    },
-    {
-        title: "Los Angeles County Wildfires: How to Help",
-        description: "",
-        cta: "Donate now",
-        image: ""
-    },
-    {
-        title: "Fundraising FAQs: Israel/Gaza",
-        description: "",
-        cta: "Learn more",
-        image: "",
-    },
-    {
-        title: "GoFundMe Profiles",
-        description: "",
-        cta: "Learn more",
-        image: ""
-    },
-]
+import { SlArrowRight } from "react-icons/sl";
+
+import { TOPICS } from "../assets/data";
 
 export default function FeaturedTopics() {
 

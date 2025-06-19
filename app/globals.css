@@ -21,17 +21,10 @@
   --color-light-purple: #f0d8fe;
   --color-dark-purple: #691d94;
 
-  --font-dm: var(--font-dm-sans);
   --font-inter: var(--font-inter);
   --font-montserrat: var(--font-montserrat);
+  --font-dm-sans: var(--font-dm-sans);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   background: var(--background);
