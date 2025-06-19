@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { animate, AnimationPlaybackControls, motion, MotionValue, useAnimation, useMotionValue, useTransform } from "framer-motion";
+import { animate, AnimationPlaybackControls, motion, MotionValue, useMotionValue, useTransform } from "framer-motion";
 
 import { BiSolidBadge } from "react-icons/bi";
 import { LiaDonateSolid } from "react-icons/lia";
-import { TbArrowUpRight, TbCategoryFilled } from "react-icons/tb";
+import { TbArrowUpRight } from "react-icons/tb";
 
 import { CATEGORIES } from "@/app/assets/data";
 import { useEffect, useRef } from 'react';

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, DM_Sans, Montserrat } from "next/font/google";
 
-import Header from "./_components/Header";
-
 import "./globals.css";
-import Footer from "./_components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
