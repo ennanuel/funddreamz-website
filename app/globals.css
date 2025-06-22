@@ -24,6 +24,8 @@
   --font-inter: var(--font-inter);
   --font-montserrat: var(--font-montserrat);
   --font-dm-sans: var(--font-dm-sans);
+
+  --ease-expo: cubic-bezier(0.3, 1, 0.16, 1);
 }
 
 body {

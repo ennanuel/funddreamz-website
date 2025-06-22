@@ -18,7 +18,7 @@ export default function HowItWorks() {
                 <div className="relative w-full aspect-video rounded-3xl overflow-hidden border-3 border-dark-green/40">
                     <Image src="/home/video-image.jpg" alt="Video cover" fill className="object-cover block" />
                     <div className="relative w-full h-full flex items-center justify-center">
-                        <button className="flex items-center justify-center gap-1 backdrop-blur bg-dark-green/80 text-green-200 rounded-full p-2 pr-6">
+                        <button className="flex items-center justify-center gap-1 backdrop-blur bg-dark-green/80 hover:bg-green-200 hover:text-dark-green text-green-200 rounded-full p-2 pr-6">
                             <span className="flex items-center justify-center w-10 aspect-square rounded-full">
                                 <FaPlay size={20} />
                             </span>

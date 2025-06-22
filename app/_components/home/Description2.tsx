@@ -10,13 +10,13 @@ export default function Description2() {
     const descriptionRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: descriptionRef,
-        offset: ['start end', 'end start']
+        offset: ['end end', 'end start']
     });
-    const scale = useTransform(scrollYProgress, [0.7, 1], [1, 0.8]);
-    const translateY = useTransform(scrollYProgress, [0.7, 1], [0, -100]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+    const translateY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
-        <div className='bg-green-200'>
+        <div ref={descriptionRef} className='bg-green-200'>
             <motion.div style={{ scale, y: translateY }} className="px-10 bg-dark-green rounded-b-4xl overflow-clip">
                 <section className="mx-auto max-w-lg w-full min-h-screen flex gap-20">
                     <div className="pt-120 pb-20 flex flex-col gap-10">

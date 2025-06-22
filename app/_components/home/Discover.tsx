@@ -32,8 +32,8 @@ export default function Discover() {
                     {
                         FUNDRAISERS.map(({ title, image, donations, amountRaised, currency }) => (
                             <li key={title} className="flex">
-                                <Link href="" className="relative flex flex-col bg-blue-900 rounded-md overflow-hidden shadow-lg shadow-transparent hover:shadow-black/10">
-                                    <Image src={image} alt={title} fill className="object-cover" />
+                                <Link href="" className="group relative flex flex-col bg-blue-900 rounded-md overflow-hidden shadow-lg shadow-transparent hover:shadow-black/10">
+                                    <Image src={image} alt={title} fill className="object-cover block group-hover:scale-110 transition-transform duration-500 ease-expo" />
                                     <div className="relative flex-1 flex flex-col justify-between gap-60 p-4 bg-gradient-to-b from-black/20 from-[60%] to-black/90">
                                         <span className="flex items-center justify-center px-3 h-7 w-fit rounded-full bg-black/20 text-white font-semibold text-sm">{donations} donations</span>
                                         <div className="flex flex-col gap-3">

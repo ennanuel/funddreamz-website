@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className="grid gap-10 grid-cols-2">
                     <div className="flex flex-col gap-6">
                         <h3 className="text-2xl tracking-tighter max-w-[24ch]">
-                            <span className="font-semibold text-white/60">FundDreamz is an official platform to start crow funded and funding for your needs.</span>
+                            <span className="font-semibold text-white/60">FundDreamz is an official platform to start crow funding and get funded for your needs.</span>
                         </h3>
                         <div className="flex items-center">
                             <Link href="" className="group w-fit flex items-center justify-center gap-4 p-2 pl-4 rounded-full bg-white/20 hover:bg-white text-white hover:text-black">

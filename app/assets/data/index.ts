@@ -9,25 +9,6 @@ import { MdFamilyRestroom, MdPets } from "react-icons/md";
 import { PiHandHeartLight } from "react-icons/pi";
 import { TbMedicalCross } from "react-icons/tb";
 
-
-export const LINKS = [
-    {
-        title: "Donate",
-        href: "/donate",
-        subLinks: []
-    },
-    {
-        title: "Fundraise",
-        href: "/fundraise",
-        subLinks: []
-    },
-    {
-        title: "About",
-        href: "/about",
-        subLinks: null
-    },
-];
-
 export const BADGES = [
     {
         title: "Transparent",
@@ -159,28 +140,28 @@ export const TOPICS = [
         description: "On April 17, many people were killed and injured at FSU in Tallahassee. Donate to verified fundraisers today to help the people and families affected.",
         cta: "Donate now",
         isUrgent: true,
-        image: "/home/Charity.jpg"
+        image: "/home/featured-topic1.jpg"
     },
     {
         title: "Los Angeles County Wildfires: How to Help",
         description: "",
         cta: "Donate now",
         isUrgent: false,
-        image: "/home/Charity.jpg"
+        image: "/home/featured-topic2.jfif"
     },
     {
         title: "Fundraising FAQs: Israel/Gaza",
         description: "",
         cta: "Learn more",
         isUrgent: false,
-        image: "/home/Charity.jpg",
+        image: "/home/featured-topic3.jfif",
     },
     {
         title: "GoFundMe Profiles",
         description: "",
         cta: "Learn more",
         isUrgent: false,
-        image: "/home/Charity.jpg"
+        image: "/home/featured-topic4.jfif"
     },
 ];
 

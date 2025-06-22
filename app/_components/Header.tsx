@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { GoTriangleDown } from "react-icons/go";
 import { PiPlantFill } from "react-icons/pi";
 import { RiMenu5Line } from "react-icons/ri";
-import { LINKS } from "../assets/data";
+import { LINKS } from "../assets/data/header";
 
 
 export default function Header() {

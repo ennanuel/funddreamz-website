@@ -73,9 +73,9 @@ function Category({ title, description, backgroundColor, textColor, borderColor,
                 style={{ perspective: '1000px' }}
                 transition={{ duration: .6, delay: .2, ease: "easeInOut" }}
             >
-                <motion.div style={{ transform: rotate, willChange: 'transform', transformStyle: 'preserve-3d' }} className={`${backgroundColor} ${textColor} w-full h-full min-h-[480px] relative p-6 flex flex-col rounded-2xl overflow-hidden justify-between gap-6`}>
+                <motion.div style={{ transform: rotate, willChange: 'transform', transformStyle: 'preserve-3d' }} className={`${backgroundColor} ${textColor} w-full h-full min-h-[480px] relative p-6 flex flex-col rounded-2xl overflow-hidden justify-between gap-6 not-[:hover]:transition-transform not-[:hover]:duration-500 not-[:hover]:ease-expo`}>
                     <div className="absolute -bottom-4 -right-4 w-1/2 aspect-square">
-                        <Icon className="w-full h-full block opacity-20 rotate-15" />
+                        <Icon className="w-full h-full block opacity-20" />
                     </div>
                     <div className="relative flex justify-between items-start gap-6">
                         <h2>
