@@ -68,7 +68,7 @@ export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: Re
                 element.classList.add('text-gray-500');
             }
         })
-        for(let [key, value] of Object.entries(ALT_HEADER_COLORS)) {
+        for(const [key, value] of Object.entries(ALT_HEADER_COLORS)) {
             headerRef.current.style.setProperty(key, value);
         }
     };
@@ -84,7 +84,7 @@ export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: Re
 
         subHeaderIsOpen.current = false;
         if(!headerRef.current) return;
-        for(let [key, value] of Object.entries(colors)) {
+        for(const [key, value] of Object.entries(colors)) {
             headerRef.current.style.setProperty(key, value);
         }
     }
