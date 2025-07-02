@@ -1,4 +1,4 @@
-import { TOPICS } from "@/app/assets/data";
+import { TOPICS } from "../../_assets/data";
 import Image from "next/image";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";

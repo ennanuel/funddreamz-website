@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { CATEGORIES_2 } from "../assets/data";
+import { CATEGORIES_2 } from "../_assets/data";
 
 export default function Categories() {
 

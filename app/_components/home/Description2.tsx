@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import { POINTS } from '@/app/assets/data';
+import { POINTS } from '../../_assets/data';
 
 
 export default function Description2() {

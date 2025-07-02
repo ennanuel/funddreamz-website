@@ -1,6 +1,6 @@
 "use client";
 
-import { DEMOS } from "@/app/assets/data";
+import { DEMOS } from "../../_assets/data";
 import { useMemo, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 

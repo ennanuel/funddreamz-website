@@ -8,7 +8,7 @@ import { motion, useMotionValue } from 'framer-motion';
 import { type IconType } from "react-icons";
 import { TbArrowUpRight } from "react-icons/tb";
 
-import { CATEGORIES_2 } from "@/app/assets/data";
+import { CATEGORIES_2 } from "../../_assets/data";
 
 
 export default function Categories() {

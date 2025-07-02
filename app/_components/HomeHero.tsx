@@ -1,11 +1,81 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
-import { HiOutlineArrowUpRight } from "react-icons/hi2";
-import { BADGES, CATEGORIES } from "../assets/data";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
+import { HiOutlineArrowUpRight } from "react-icons/hi2";
+import { BADGES, CATEGORIES } from "../_assets/data";
+import { AnimatePresence, motion } from 'framer-motion';
+
+const CATEGORY_VARIANTS = {
+    exit: {
+        opacity: 0,
+        transition: {
+            duration: 0.3,
+        }
+    },
+    enter: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+        }
+    }
+}
+
+const DEFAULT_CATEGORY_WIDTH = 100;
 
 export default function HomeHero() {
+    const interval = useRef<NodeJS.Timeout>(null);
+    const categoriesCarouselRef = useRef<HTMLUListElement>(null);
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [{ categoriesContainerWidth, categoriesGap }, setCategoryDimensions] = useState({ categoriesContainerWidth: 0, categoriesGap: 0 });
+
+    const categories = useMemo(() => CATEGORIES.slice(0, 4), []);
+    const categoryWidths = useMemo(() => categories.map((_, index) => {
+        if (index === activeIndex) {
+            const width = categoriesContainerWidth - (categoriesGap * (CATEGORIES.length - 1)) - (DEFAULT_CATEGORY_WIDTH * (CATEGORIES.length - 2));
+            return width;
+        } else return DEFAULT_CATEGORY_WIDTH;
+    }), [activeIndex, categories, categoriesContainerWidth, categoriesGap]);
+
+    const stopInterval = () => {
+        if (interval.current) clearInterval(interval.current);
+    };
+    const startInterval = () => {
+        stopInterval();
+        interval.current = setInterval(changeActiveIndex, 3000);
+    };
+    const selectActiveIndex = (index: number) => {
+        stopInterval();
+        setActiveIndex(index);
+    };
+    const changeActiveIndex = () => {
+        setActiveIndex((prevIndex) => {
+            const newActiveIndex = prevIndex < categories.length - 1 ? 
+                prevIndex + 1 : 
+                0;
+            return newActiveIndex;
+        })
+    };
+
+    useEffect(() => {
+        if (!categoriesCarouselRef.current) return;
+        const categoryContainerComputedStyle = window.getComputedStyle(categoriesCarouselRef.current);
+        const categoryContainerGap = Number(categoryContainerComputedStyle.gap.replace(/\w+/ig, ''));
+        const categoryContainerWidth = categoriesCarouselRef.current.offsetWidth;
+
+        setCategoryDimensions({ categoriesContainerWidth: categoryContainerWidth, categoriesGap: categoryContainerGap });
+    }, []);
+
+    useEffect(() => {
+        stopInterval();
+        startInterval();
+
+        return stopInterval;
+    }, [activeIndex, categories]);
 
     return (
         <section className="px-4 sm:px-6 md:px-10">
@@ -28,31 +98,54 @@ export default function HomeHero() {
                     </ul>
                 </div>
                 <div className="hidden sm:flex md:flex-1">
-                    <ul className="pt-20 pb-20 w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4">
+                    <ul 
+                        ref={categoriesCarouselRef}
+                        className="pt-20 pb-20 w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4"
+                    >
                         {
-                            CATEGORIES.slice(0, 4).map(({ title, href, image }, index) => (
-                                <li key={title} className={`${index === 0 ? 'w-full max-w-[400px]' : 'min-w-30 lg:min-w-auto aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 max-h-[560px]`}>
+                            categories.map(({ title, href, image }, index) => (
+                                <motion.li 
+                                    key={title} 
+                                    animate={{ width: categoryWidths[index] }}
+                                    onMouseOver={() => selectActiveIndex(index)}
+                                    onMouseOut={startInterval}
+                                    className={`${index === activeIndex ? '' : 'aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 max-h-[560px]`}
+                                    transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
+                                >
                                     <Link href={`/categories${href}`} className="overflow-hidden relative block w-full h-full rounded-2xl border border-gray-200">
                                         <Image src={image} fill alt={`${title} category image`} className="object-cover" />
-                                        <div className={`${index === 0 ? 'to-80% via-transparent to-gray-500/80' : 'items-center via-gray-500/50 to-gray-500'} bg-gradient-to-b p-4 justify-between relative w-full h-full flex flex-col gap-4`}>
-                                            <span className={`${index !== 0 ? 'opacity-0' : ''} flex items-center justify-center w-8 sm:w-10 md:w-12 aspect-square rounded-full border border-gray-300 text-gray-300`}>
+                                        <div className={`${index === activeIndex ? 'to-80% via-transparent to-gray-500/80' : 'via-gray-500/50 to-gray-500'} bg-gradient-to-b p-4 justify-between relative w-full h-full flex flex-col gap-4`}>
+                                            <motion.span
+                                                animate={{ 
+                                                    scale: index === activeIndex ? 1 : 0.4,
+                                                    opacity: index === activeIndex ? 1 : 0
+                                                }} 
+                                                transition={{ duration: 1, ease: [0.3, 1, 0.16, 1] }} 
+                                                className="origin-top-left flex items-center justify-center w-8 sm:w-10 md:w-14 aspect-square rounded-full bg-black/40 backdrop-blur text-white"
+                                            >
                                                 <HiOutlineArrowUpRight size={20} />
-                                            </span>
-                                            <div className="flex flex-col gap-1 sm:gap-2">
-                                                <h3>
-                                                    <span className={`${index === 0 ? 'text-white' : 'lg:-rotate-90 lg:w-[2.25rem] whitespace-nowrap tracking-tight text-white'} block text-base sm:text-lg md:text-xl lg:text-4xl`}>{title}</span>
-                                                </h3>
+                                            </motion.span>
+                                            <AnimatePresence initial={false} mode="wait">
                                                 {
-                                                    index === 0 ?
-                                                        <p className="text-xs lg:text-sm">
-                                                            <span className="text-gray-300 max-w-[24ch]">More than $50 million is raised every week on GoFundMe.*</span>
-                                                        </p> :
-                                                        null
+                                                    index === activeIndex ?
+                                                        <motion.div key={`${title}-active`} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col gap sm:gap-2">
+                                                            <h3>
+                                                                <span className="text-white block text-base sm:text-lg md:text-xl lg:text-4xl">{title}</span>
+                                                            </h3>
+                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-xs lg:text-sm">
+                                                                <span className="text-gray-300 max-w-[24ch]">More than $50 million is raised every week on GoFundMe.*</span>
+                                                            </motion.p>
+                                                        </motion.div> :
+                                                        <motion.div key={title} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col items-center w-full">
+                                                            <h3>
+                                                                <span className="lg:-rotate-90 lg:w-[2.25rem] whitespace-nowrap tracking-tight text-white block text-base sm:text-lg md:text-xl lg:text-4xl">{title}</span>
+                                                            </h3>
+                                                        </motion.div>
                                                 }
-                                            </div>
+                                            </AnimatePresence>
                                         </div>
                                     </Link>
-                                </li>
+                                </motion.li>
                             ))
                         }
                     </ul>

@@ -1,4 +1,4 @@
-import { SubHeader as SubHeaderType, SubHeaderProps } from "@/app/types";
+import { SubHeader as SubHeaderType, SubHeaderProps } from "@/app/_types";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -73,7 +73,7 @@ function NavLinkAlt({ title, Icon, description, href }: SubHeaderType) {
             </span>
             <div className="flex flex-col">
                 <span className="text-2xl font-semibold tracking-tight">{title}</span>
-                <span className="text-base tracking-tight font-normal text-gray-500">{description}</span>
+                <span className="text-sm font-[500] tracking-tight text-gray-500">{description}</span>
             </div>
         </Link>
     )

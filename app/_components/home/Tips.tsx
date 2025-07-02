@@ -1,4 +1,4 @@
-import { TIPS } from "@/app/assets/data";
+import { TIPS } from "../../_assets/data";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 

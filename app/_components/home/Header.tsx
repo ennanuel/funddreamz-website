@@ -10,7 +10,7 @@ import { BiSearch } from "react-icons/bi";
 import { PiPlantFill } from "react-icons/pi";
 import SubHeader from "./SubHeader";
 
-import { LINKS } from "@/app/assets/data/header";
+import { LINKS } from "../../_assets/data/header";
 
 const DEFAULT_HEADER_COLORS = { 
     '--background': '#f3f4f6',
@@ -32,7 +32,7 @@ const ALT_HEADER_COLORS = {
     '--search-background': '#fafafa'
 } as React.CSSProperties;
 
-export default function Header() {
+export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: React.CSSProperties }) {
     const headerRef = useRef<HTMLHeadElement>(null);
     const subHeaderIsOpen = useRef<boolean>(false);
     const { scrollY } = useScroll();
@@ -84,7 +84,7 @@ export default function Header() {
 
         subHeaderIsOpen.current = false;
         if(!headerRef.current) return;
-        for(let [key, value] of Object.entries(DEFAULT_HEADER_COLORS)) {
+        for(let [key, value] of Object.entries(colors)) {
             headerRef.current.style.setProperty(key, value);
         }
     }
@@ -92,8 +92,8 @@ export default function Header() {
     return (
         <header 
             ref={headerRef} 
-            style={DEFAULT_HEADER_COLORS}
-            className="z-10 px-4 sm:px-6 bg-[var(--background)] sticky top-0 transition-transform ease-expo duration-1000"
+            style={colors}
+            className="z-10 px-8 bg-[var(--background)] sticky top-0 transition-transform ease-expo duration-1000"
         >
             <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
@@ -139,13 +139,13 @@ export default function Header() {
                 </div>
                 <div className="flex items-center gap-6">
                     <div className="flex items-center bg-[var(--search-background)] rounded-full text-[var(--text-color)]">
-                        <input type="text" className="px-4 min-w-30 bg-transparent border-none focus:outline-none h-10" placeholder="Search" />
+                        <input type="text" className="px-4 min-w-30 bg-transparent border-none focus:outline-none tracking-tighter h-10 placeholder:text-[var(--text-color)] text-[var(--text-color)_!important]" placeholder="Search" />
                         <button className="flex items-center justify-center w-8 mr-1 aspect-square rounded-full hover:bg-[var(--main)]/20 hover:text-[var(--main)]">
                             <BiSearch size={16} />
                         </button>
                     </div>
                     <div className="hidden lg:flex items-center gap-2">
-                        <Link href="/sign-in" className="px-6 rounded-full h-10 hover:bg-[var(--secondary)] flex items-center justify-center">
+                        <Link href="/sign-in" className="px-6 rounded-full h-10 hover:bg-[var(--secondary)] text-[var(--main)] flex items-center justify-center">
                             <span className="font-semibold">Sign in</span>
                         </Link>
                         <Link href="/get-started" className="flex items-center justify-center px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">

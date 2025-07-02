@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
-import { TIPS } from "../assets/data";
+import { TIPS } from "../_assets/data";
 
 export default function Tips() {
 

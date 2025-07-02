@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 import { SlArrowDown } from "react-icons/sl";
-import { FUNDRAISERS } from "../assets/data";
+import { FUNDRAISERS } from "../_assets/data";
 
 
 

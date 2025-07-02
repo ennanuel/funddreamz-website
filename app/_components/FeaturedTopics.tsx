@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { SlArrowRight } from "react-icons/sl";
 
-import { TOPICS } from "../assets/data";
+import { TOPICS } from "../_assets/data";
 
 export default function FeaturedTopics() {
 
@@ -50,8 +50,8 @@ export default function FeaturedTopics() {
                 </div>
                 <div className="mt-6 flex md:hidden items-center justify-center gap-1">
                     {
-                        TOPICS.map((sth, index) => (
-                            <span key={sth.title} className={`${index === 0 ? 'w-6 bg-secondary' : 'w-1 bg-gray-200'} block h-1 rounded-full`} />
+                        TOPICS.map((topic, index) => (
+                            <span key={topic.title} className={`${index === 0 ? 'w-6 bg-secondary' : 'w-1 bg-gray-200'} block h-1 rounded-full`} />
                         ))
                     }
                 </div>

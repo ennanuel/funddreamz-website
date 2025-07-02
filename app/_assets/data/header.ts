@@ -1,4 +1,4 @@
-import { Link as LinkType } from "@/app/types";
+import { Link as LinkType } from "@/app/_types";
 import { BiPlusMedical } from "react-icons/bi";
 import { FaCircleInfo, FaPeopleGroup } from "react-icons/fa6";
 

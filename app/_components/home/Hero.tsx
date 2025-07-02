@@ -7,15 +7,15 @@ import { BiSolidBadge } from "react-icons/bi";
 import { LiaDonateSolid } from "react-icons/lia";
 import { TbArrowUpRight } from "react-icons/tb";
 
-import { CATEGORIES } from "@/app/assets/data";
+import { CATEGORIES } from "../../_assets/data";
 import { useEffect, useRef } from 'react';
 
 
 export default function Hero() {
     return (
-        <section className="flex flex-col gap-20">
-            <div className="pt-20 pb-10 min-h-[calc(100dvh_-_64px)] flex flex-col gap-20 items-center justify-end">
-                <div className="mx-auto w-full max-w-lg flex flex-col gap-6">
+        <div className="flex flex-col gap-20">
+            <section className="pt-20 pb-10 min-h-[calc(100dvh_-_64px)] flex flex-col gap-20 items-center justify-end">
+                <div className="mx-auto w-full max-w-lg flex flex-col gap-6 px-10">
                     <span className="relative w-12 aspect-square block">
                         <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-dark-green rotate-45">
                             <BiSolidBadge size={48} />
@@ -34,8 +34,8 @@ export default function Hero() {
                     </div>
                 </div>
                 <MovingCategories />
-            </div>
-        </section>
+            </section>
+        </div>
     )
 };
 

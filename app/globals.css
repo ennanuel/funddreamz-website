@@ -2,13 +2,15 @@
 @import "tailwindcss";
 
 :root {
-  --max-width: 1280px;
+  --mw-xl: 2480px;
+  --mw-lg: 1280px;
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
-  --max-width-lg: var(--max-width);
+  --max-width-xl: var(--mw-xl);
+  --max-width-lg: var(--mw-gl);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

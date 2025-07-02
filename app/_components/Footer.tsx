@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link"
 import { BsDot } from "react-icons/bs";
 import { SlArrowDown } from "react-icons/sl";
-import { LEGALS, LINKS, RESOURCES, SOCIALS } from "../assets/data/footer";
+import { LEGALS, LINKS, RESOURCES, SOCIALS } from "../_assets/data/footer";
 
 
 export default function Footer() {
