@@ -1,10 +1,12 @@
+"use client";
+import { useEffect } from "react";
 
 import DoingTheMath from "../_components/pricing/DoingTheMath";
 import Explanations from "../_components/pricing/Explanations";
-import Footer from "../_components/home/Footer";
-import Header from "../_components/home/Header";
 import Hero from "../_components/pricing/Hero";
 import CallToAction from "../_components/pricing/CallToAction";
+
+import { setDefaultHeaderColors } from "../_utils/header";
 
 
 const HEADER_COLORS = { 
@@ -18,15 +20,16 @@ const HEADER_COLORS = {
 } as React.CSSProperties;
 
 export default function Pricing() {
+    useEffect(() => {
+        setDefaultHeaderColors(HEADER_COLORS);
+    }, [])
 
     return(
         <div className="bg-dark-green">
-            <Header colors={HEADER_COLORS} />
             <Hero />
             <DoingTheMath />
             <Explanations />
             <CallToAction />
-            <Footer />
         </div>
     )
 }

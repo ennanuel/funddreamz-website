@@ -132,7 +132,7 @@ export default function HomeHero() {
                                                             <h3>
                                                                 <span className="text-white block text-base sm:text-lg md:text-xl lg:text-4xl">{title}</span>
                                                             </h3>
-                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-xs lg:text-sm">
+                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-xs lg:text-sm min-w-[24ch]">
                                                                 <span className="text-gray-300 max-w-[24ch]">More than $50 million is raised every week on GoFundMe.*</span>
                                                             </motion.p>
                                                         </motion.div> :

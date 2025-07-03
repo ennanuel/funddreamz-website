@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans, Montserrat } from "next/font/google";
 
 import "./globals.css";
+import LayoutWrapper from "./_components/LayoutWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSans.variable} ${montserrat.variable} antialiased font-montserrat`}
       > 
-        {children}
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );

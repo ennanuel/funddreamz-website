@@ -12,6 +12,18 @@ import { TbMedicalCross, TbPlant2, TbSailboat } from "react-icons/tb";
 import { child1, church1, dog1, dog2, family1, family2, family3, farm1, friends1, girl1, graduation1, graduation2, momAndChild1, officer1, protest1 } from "../images/category-fundraisers";
 import { board, peopleSharing } from "../images";
 
+
+
+export const DEFAULT_HEADER_COLORS = { 
+    '--background': '#f3f4f6',
+    '--icon-background': '#b9f8cf',
+    '--icon-color': '#02a85c',
+    '--main': '#022d19',
+    '--secondary': '#ffffff',
+    '--text-color': '#1e2939',
+    '--search-background': 'rgba(255, 255, 255, 0.8)',
+} as React.CSSProperties;
+
 export const BADGES = [
     {
         title: "Transparent",

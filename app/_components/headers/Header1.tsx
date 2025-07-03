@@ -1,26 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 import { BiSearch } from "react-icons/bi";
 import { PiPlantFill } from "react-icons/pi";
+
 import SubHeader from "./SubHeader";
 
 import { LINKS } from "../../_assets/data/header";
-
-const DEFAULT_HEADER_COLORS = { 
-    '--background': '#f3f4f6',
-    '--icon-background': '#b9f8cf',
-    '--icon-color': '#02a85c',
-    '--main': '#022d19',
-    '--secondary': '#ffffff',
-    '--text-color': '#1e2939',
-    '--search-background': 'rgba(255, 255, 255, 0.8)',
-} as React.CSSProperties;
+import { changeHeaderColors, revertHeaderColorsToDefault } from '../../_utils/header';
 
 const ALT_HEADER_COLORS = {
     '--background': '#ffffff',
@@ -32,9 +26,10 @@ const ALT_HEADER_COLORS = {
     '--search-background': '#fafafa'
 } as React.CSSProperties;
 
-export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: React.CSSProperties }) {
+export default function Header() {
     const headerRef = useRef<HTMLHeadElement>(null);
     const subHeaderIsOpen = useRef<boolean>(false);
+
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", () => {
@@ -58,7 +53,6 @@ export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: Re
         subHeader.classList.add('block');
         subHeaderIsOpen.current = true;
         
-        if(!headerRef.current) return;
         [...(document.querySelectorAll('.nav-link'))].forEach((element) => {
             if(element.id === `nav-link-${index}`) {
                 element.classList.remove('text-gray-500');
@@ -67,10 +61,9 @@ export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: Re
                 element.classList.remove('text-[var(--secondary)]');
                 element.classList.add('text-gray-500');
             }
-        })
-        for(const [key, value] of Object.entries(ALT_HEADER_COLORS)) {
-            headerRef.current.style.setProperty(key, value);
-        }
+        });
+
+        changeHeaderColors(ALT_HEADER_COLORS);
     };
     const closeSubHeader = () => {
         [...(document.querySelectorAll('.sub-header'))].forEach((element) => {
@@ -83,23 +76,22 @@ export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: Re
         })
 
         subHeaderIsOpen.current = false;
-        if(!headerRef.current) return;
-        for(const [key, value] of Object.entries(colors)) {
-            headerRef.current.style.setProperty(key, value);
-        }
+        revertHeaderColorsToDefault();
     }
 
     return (
         <header 
-            ref={headerRef} 
-            style={colors}
+            ref={headerRef}
+            id="page-header"
             className="z-10 px-8 bg-[var(--background)] sticky top-0 transition-transform ease-expo duration-1000"
         >
             <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="-mt-1 flex gap-2 items-center justify-center">
-                        <span className="w-10 flex items-center justify-center aspect-square rounded-full bg-[var(--icon-background)] text-[var(--icon-color)]">
-                            <PiPlantFill size={20} className="" />
+                        <span className="p-0.25 block aspect-square rounded-full bg-[var(--icon-color)]">
+                            <span className="relative block w-10 aspect-square">
+                                <Image src="/favicon.svg" fill alt="Fund dreams logo" className="block object-cover" />
+                            </span>
                         </span>
                         <div className="flex items-center text-[var(--main)] font-bold text-2xl leading-[1.3rem] tracking-tighter">
                             <span>f.</span>

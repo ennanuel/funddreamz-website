@@ -97,7 +97,7 @@ function CategorySlider({ x }: { x: MotionValue }) {
             {
                 CATEGORIES.map(({ title, colors, Icon, href }) => (
                     <li key={title}>
-                        <Link draggable={false} href={href} className={`${colors} overflow-hidden relative min-w-[320px] flex justify-between p-6 pb-4 rounded-3xl`}>
+                        <Link draggable={false} href={`/category${href}`} className={`${colors} overflow-hidden relative min-w-[320px] flex justify-between p-6 pb-4 rounded-3xl`}>
                             <div className="flex flex-col justify-between gap-10">
                                 <span className="flex items-center justify-center w-12 aspect-square rounded-full bg-white">
                                     <TbArrowUpRight size={20} />

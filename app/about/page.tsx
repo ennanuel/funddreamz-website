@@ -1,10 +1,12 @@
+"use client";
+
+import { useEffect } from "react";
 
 import Description from "../_components/about/Description";
 import Description2 from "../_components/about/Description2";
-import Footer from "../_components/home/Footer";
-import Header from "../_components/home/Header";
 import Hero from "../_components/about/Hero";
 import MoreSection from "../_components/about/MoreSection";
+import { setDefaultHeaderColors } from "../_utils/header";
 
 
 const HEADER_COLORS = { 
@@ -18,15 +20,16 @@ const HEADER_COLORS = {
 } as React.CSSProperties;
 
 export default function About() {
+    useEffect(() => {
+        setDefaultHeaderColors(HEADER_COLORS);
+    }, []);
 
     return (
         <div className="bg-light-purple">
-            <Header colors={HEADER_COLORS} />
             <Hero />
             <Description />
             <Description2 />
             <MoreSection />
-            <Footer />
         </div>
     )
 }

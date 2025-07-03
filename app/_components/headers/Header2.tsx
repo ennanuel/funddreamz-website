@@ -16,7 +16,7 @@ const DEFAULT_HEADER_COLORS = {
 export default function Header({ colors = DEFAULT_HEADER_COLORS }: { colors?: React.CSSProperties }) {
 
     return (
-        <header style={colors} className="px-6 font-montserrat">
+        <header style={colors} className="sticky top-0 z-10 px-6 font-montserrat">
             <nav className="h-12 mx-auto max-w-xl w-full flex items-center justify-between">
                 <Link href="/" className="font-dm-sans -mt-1 flex gap-2 items-center justify-center">
                     <span className="w-8 flex items-center justify-center aspect-square rounded-full bg-[var(--icon-background)] text-[var(--icon-color)]">

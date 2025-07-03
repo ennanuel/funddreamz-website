@@ -1,20 +1,22 @@
+"use client";
 
-import Header from "../_components/home/Header";
 import Hero from "../_components/categories/Hero";
-import Footer from "../_components/home/Footer";
 import CategoriesContainer from "../_components/categories/CategoriesContainer";
 import CategoryFundRaisers from "../_components/categories/CategoryFundraisers";
+import { useEffect } from "react";
+import { changeHeaderColors } from "../_utils/header";
 
 
 export default function Categories() {
+    useEffect(() => {
+        changeHeaderColors();
+    }, []);
 
     return (
         <div className="bg-gray-100">
-            <Header />
             <Hero />
             <CategoriesContainer />
             <CategoryFundRaisers />
-            <Footer />
         </div>
     )
 }
