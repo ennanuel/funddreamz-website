@@ -23,19 +23,19 @@ const POINTS = [
 export default function Points() {
 
     return (
-        <div className="px-10 bg-light-purple py-20">
+        <div className="px-10 bg-light-orange py-20">
             <section className="mx-auto max-w-lg w-full">
-                <h3 className="text-2xl font-semibold tracking-tighter"><span className="text-dark-purple">Your easy, powerful, and trusted home for help</span></h3>
+                <h3 className="text-xl font-semibold tracking-tighter"><span className="text-dark-orange">Your easy, powerful, and trusted home for help</span></h3>
                 <ul className="mt-8 grid grid-cols-3 gap-6">
                     {
                         POINTS.map(({ title, description, Icon }) => (
-                            <li key={title} className="flex items-start gap-4 rounded-xl p-4 border border-dark-purple/20">
-                                <span className="w-12 aspect-square flex items-center justify-center rounded-full bg-dark-purple/10 text-dark-purple">
+                            <li key={title} className="flex items-start gap-4 rounded-xl p-4 border border-dark-orange/20">
+                                <span className="w-12 aspect-square flex items-center justify-center rounded-full bg-dark-orange/10 text-dark-orange">
                                     <Icon size={20} />
                                 </span>
                                 <div>
-                                    <h4 className="text-base font-semibold tracking-tighter"><span className="text-dark-purple">{title}</span></h4>
-                                    <p className="text-sm font-semibold tracking-tighter"><span className="text-dark-purple/60">{description}</span></p>
+                                    <h4 className="text-base font-semibold tracking-tighter"><span className="text-dark-orange">{title}</span></h4>
+                                    <p className="text-sm font-semibold tracking-tighter"><span className="text-dark-orange/60">{description}</span></p>
                                 </div>
                             </li>
                         ))

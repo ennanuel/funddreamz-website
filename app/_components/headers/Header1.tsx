@@ -4,12 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 import { BiSearch } from "react-icons/bi";
-import { PiPlantFill } from "react-icons/pi";
 
 import SubHeader from "./SubHeader";
 
