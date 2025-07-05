@@ -10,6 +10,7 @@ import Footer2 from "./footers/Footer2";
 import Header from "./headers/Header";
 import Header1 from "./headers/Header1";
 import Header2 from "./headers/Header2";
+import Header3 from "./headers/Header3";
 
 const MAIN_PAGES = [
     '/home',
@@ -25,11 +26,17 @@ const MAIN_PAGES = [
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
 
-    if(MAIN_PAGES.some((page) => pathname.includes(page))) return (
+    if (pathname.includes('/donate')) return (
+        <div>
+            <Header3 />
+            {children}
+        </div>
+    )
+    else if (MAIN_PAGES.some((page) => pathname.includes(page))) return (
         <ProgressProvider 
             height="4px" 
             color="#02a85c" 
-            options={{ showSpinner: true }}
+            options={{ showSpinner: false }}
             shallowRouting
         >
             <div>

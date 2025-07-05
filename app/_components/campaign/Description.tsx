@@ -1,9 +1,9 @@
-import { FaRegCircle } from "react-icons/fa6"
+import { FaRegCircle } from "react-icons/fa6";
 
 
 export default function Description() {
     return (
-        <article className="mx-4 pt-4 pb-16 text-sm tracking-tighters">
+        <article className="mx-4 pt-4 border-t border-gray-200 pb-16 text-sm tracking-tighters">
             <h3 className="text-lg font-semibold tracking-tighter"><span>Description</span></h3>
             <p className="mt-6">
                 <span>On Saturday, 28 June, a tragic incident occurred in Chalkwell Park, Southend-on-Sea. During what should have been a joyful afternoon, a large, ageing tree near the rose garden partially collapsed, striking a group of children.

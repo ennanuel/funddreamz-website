@@ -44,42 +44,36 @@ export const CATEGORIES = [
         title: "Your cause",
         href: "/your-cause",
         image: "/home/your-cause1.jpg",
-        colors: "bg-green-200 text-main",
         Icon: FaPersonBreastfeeding
     },
     {
         title: "Emergency",
         href: "/emergency",
         image: "/home/emergency1.jpg",
-        colors: "bg-yellow-300 text-yellow-800",
         Icon: TbMedicalCross
     },
     {
         title: "Medical",
         href: "/medical",
         image: "/home/emergency2.jpg",
-        colors: "bg-purple-400 text-purple-800",
         Icon: GiHealthCapsule
     },
     {
         title: "Business",
         href: "/business",
         image: "/home/business2.jpg",
-        colors: "bg-blue-300 text-blue-900",
         Icon: BiSolidBriefcase
     },
     {
         title: "Education",
         href: "/education",
         image: "/home/education1.jpg",
-        colors: "bg-orange-200 text-orange-900",
         Icon: IoIosSchool
     },
     {
         title: "Animal",
         href: "/animal",
         image: "/home/agrculture3.jpg",
-        colors: "bg-teal-200 text-teal-800",
         Icon: MdPets
     },
 ];

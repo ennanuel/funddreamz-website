@@ -1,118 +1,156 @@
 "use client";
 
 import Link from "next/link";
-import { animate, AnimationPlaybackControls, motion, MotionValue, useMotionValue, useTransform } from "framer-motion";
+import Image from "next/image";
 
-import { BiSolidBadge } from "react-icons/bi";
-import { LiaDonateSolid } from "react-icons/lia";
-import { TbArrowUpRight } from "react-icons/tb";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
-import { CATEGORIES } from "../../_assets/data";
-import { useEffect, useRef } from 'react';
+import { HiOutlineArrowUpRight } from "react-icons/hi2";
+import { BADGES, CATEGORIES } from "@/app/_assets/data";
+import { AnimatePresence, motion } from 'framer-motion';
 
-
-export default function Hero() {
-    return (
-        <div className="flex flex-col gap-20">
-            <section className="pt-20 pb-10 min-h-[calc(100dvh_-_64px)] flex flex-col gap-20 items-center justify-end">
-                <div className="mx-auto w-full max-w-lg flex flex-col gap-6 px-10">
-                    <span className="relative w-12 aspect-square block">
-                        <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-dark-green rotate-45">
-                            <BiSolidBadge size={48} />
-                        </span>
-                        <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-green-200">
-                            <LiaDonateSolid size={20} />
-                        </span>
-                    </span>
-                    <div className="flex gap-20">
-                        <div className="flex-1 flex flex-col gap-6">
-                            <p className="max-w-[46ch] text-lg tracking-tighter font-semibold">Get started in just a few minutes — with helpful new tools, it&apos;s easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
-                        </div>
-                        <div className="flex-2">
-                            <h1 className="-mt-2 font-bold text-6xl tracking-tighter">Successful fundraisers<br /> start here</h1>
-                        </div>
-                    </div>
-                </div>
-                <MovingCategories />
-            </section>
-        </div>
-    )
-};
-
-function MovingCategories() {
-    const controls = useRef<AnimationPlaybackControls>(null);
-    const translateX = useMotionValue(0);
-    const sliderMotion = useTransform(translateX, (value) => `${value * -1}%`);
-
-    function stopAnimation() {
-        if(controls.current) controls.current.stop();
-    }
-    function moveCategories(duration: number, waitToFinish?: boolean) {
-        stopAnimation();
-
-        if(waitToFinish) {
-            const currentXValue = translateX.get();
-            const durationToFinish = duration - (duration * (currentXValue / 100));
-
-            controls.current = animate(translateX, [currentXValue, 100], {
-                duration: durationToFinish,
-                ease: 'linear', 
-                onComplete: () => moveCategories(duration)
-            })
-        } else {
-            controls.current = animate(translateX, [0, 100], {
-                duration,
-                ease: 'linear',
-                repeat: Infinity
-            })
+const CATEGORY_VARIANTS = {
+    exit: {
+        opacity: 0,
+        transition: {
+            duration: 0.3,
         }
-    };
-
-    function slowDownMove() {
-        moveCategories(30, true);
-    };
-
-    function revertToNormalSpeed() {
-        moveCategories(20, true);
+    },
+    enter: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+        }
     }
+}
+
+const DEFAULT_CATEGORY_WIDTH = 100;
+
+export default function HomeHero() {
+    const interval = useRef<NodeJS.Timeout>(null);
+    const categoriesCarouselRef = useRef<HTMLUListElement>(null);
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [{ categoriesContainerWidth, categoriesGap }, setCategoryDimensions] = useState({ categoriesContainerWidth: 0, categoriesGap: 0 });
+
+    const categories = useMemo(() => CATEGORIES.slice(0, 4), []);
+    const categoryWidths = useMemo(() => categories.map((_, index) => {
+        if (index === activeIndex) {
+            const width = categoriesContainerWidth - (categoriesGap * (CATEGORIES.length - 1)) - (DEFAULT_CATEGORY_WIDTH * (CATEGORIES.length - 2));
+            return width;
+        } else return DEFAULT_CATEGORY_WIDTH;
+    }), [activeIndex, categories, categoriesContainerWidth, categoriesGap]);
+
+    const stopInterval = () => {
+        if (interval.current) clearInterval(interval.current);
+    };
+    const startInterval = () => {
+        stopInterval();
+        interval.current = setInterval(changeActiveIndex, 3000);
+    };
+    const selectActiveIndex = (index: number) => {
+        stopInterval();
+        setActiveIndex(index);
+    };
+    const changeActiveIndex = () => {
+        setActiveIndex((prevIndex) => {
+            const newActiveIndex = prevIndex < categories.length - 1 ? 
+                prevIndex + 1 : 
+                0;
+            return newActiveIndex;
+        })
+    };
 
     useEffect(() => {
-        moveCategories(20);
+        if (!categoriesCarouselRef.current) return;
+        const categoryContainerComputedStyle = window.getComputedStyle(categoriesCarouselRef.current);
+        const categoryContainerGap = Number(categoryContainerComputedStyle.gap.replace(/\w+/ig, ''));
+        const categoryContainerWidth = categoriesCarouselRef.current.offsetWidth;
+
+        setCategoryDimensions({ categoriesContainerWidth: categoryContainerWidth, categoriesGap: categoryContainerGap });
     }, []);
 
-    return (
-        <div onMouseOver={slowDownMove} onMouseOut={revertToNormalSpeed} className="w-full flex overflow-hidden">
-            <CategorySlider x={sliderMotion} />
-            <CategorySlider x={sliderMotion} />
-        </div>
-    )
-};
+    useEffect(() => {
+        stopInterval();
+        startInterval();
 
-function CategorySlider({ x }: { x: MotionValue }) {
+        return stopInterval;
+    }, [activeIndex, categories]);
+
     return (
-        <motion.ul 
-            style={{ x }}
-            className="w-fit flex gap-6 overflow-visible pr-6"
-        >
-            {
-                CATEGORIES.map(({ title, colors, Icon, href }) => (
-                    <li key={title}>
-                        <Link draggable={false} href={`/category${href}`} className={`${colors} overflow-hidden relative min-w-[320px] flex justify-between p-6 pb-4 rounded-3xl`}>
-                            <div className="flex flex-col justify-between gap-10">
-                                <span className="flex items-center justify-center w-12 aspect-square rounded-full bg-white">
-                                    <TbArrowUpRight size={20} />
-                                </span>
-                                <div className="flex flex-col">
-                                    <h2 className="font-semibold text-2xl tracking-tighter">{title}</h2>
-                                </div>
-                            </div>
-                            <span className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 rotate-15">
-                                <Icon size={120} className="opacity-60" />
-                            </span>
-                        </Link>
-                    </li>
-                ))
-            }
-        </motion.ul>
+        <section className="px-4 sm:px-6 md:px-10">
+            <div className="mx-auto max-w-lg pt-12 pb-16 md:pt-0 md:min-h-[calc(100vh_-_64px)] flex flex-col-reverse lg:flex-row lg:gap-20 lg:items-end">
+                <div className="flex flex-col items-center lg:items-start justify-center">
+                    <h1 className="md:max-w-[12ch] text-3xl sm:text-[3rem] md:text-[4rem] text-center lg:text-left leading-[2.4rem] sm:leading-[3.6rem] md:leading-[4.6rem] font-semibold tracking-tighter">Successful <br className="block md:hidden" />fundraisers start here.</h1>
+                    <p className="mt-4 tracking-tighter text-left text-xl font-semibold max-w-[40ch]">Get started in just a few minutes — with helpful new tools, it&apos;s easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
+                    <button className="mt-8 h-12 rounded-full px-6 sm:px-10 bg-main text-white w-fit min-w-50 sm:min-w-60">
+                        <span className="tracking-tighter font-semibold whitespace-nowrap">Start a fundraiser</span>
+                    </button>
+                    <ul className="mt-8 flex items-center gap-6">
+                        {
+                            BADGES.map(({ title, Icon }) => (
+                                <li key={title} className="flex items-center justify-center gap-2 text-gray-400">
+                                    <Icon size={16} />
+                                    <span className="text-xs">{title}</span>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+                <div className="hidden sm:flex md:flex-1">
+                    <ul 
+                        ref={categoriesCarouselRef}
+                        className="w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4"
+                    >
+                        {
+                            categories.map(({ title, href, image }, index) => (
+                                <motion.li 
+                                    key={title} 
+                                    animate={{ width: categoryWidths[index] }}
+                                    onMouseOver={() => selectActiveIndex(index)}
+                                    onMouseOut={startInterval}
+                                    className={`${index === activeIndex ? '' : 'aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 lg:min-h-[480px] lg:max-h-[480px]`}
+                                    transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
+                                >
+                                    <Link href={`/categories${href}`} className="overflow-hidden relative block w-full h-full rounded-2xl border border-gray-200">
+                                        <Image src={image} fill alt={`${title} category image`} className="object-cover" />
+                                        <div className={`${index === activeIndex ? 'to-80% via-transparent to-gray-500/80' : 'via-gray-500/50 to-gray-500'} bg-gradient-to-b p-4 justify-between relative w-full h-full flex flex-col gap-4`}>
+                                            <motion.span
+                                                animate={{ 
+                                                    scale: index === activeIndex ? 1 : 0.4,
+                                                    opacity: index === activeIndex ? 1 : 0
+                                                }} 
+                                                transition={{ duration: 1, ease: [0.3, 1, 0.16, 1] }} 
+                                                className="origin-top-left flex items-center justify-center w-8 sm:w-10 md:w-14 aspect-square rounded-full bg-black/40 backdrop-blur text-white"
+                                            >
+                                                <HiOutlineArrowUpRight size={20} />
+                                            </motion.span>
+                                            <AnimatePresence initial={false} mode="wait">
+                                                {
+                                                    index === activeIndex ?
+                                                        <motion.div key={`${title}-active`} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col gap sm:gap-2">
+                                                            <h3>
+                                                                <span className="text-white block text-base sm:text-lg md:text-xl lg:text-4xl tracking-tighter">{title}</span>
+                                                            </h3>
+                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-xs lg:text-sm min-w-[24ch]">
+                                                                <span className="text-gray-300 max-w-[24ch]">More than $50 million is raised every week on GoFundMe.*</span>
+                                                            </motion.p>
+                                                        </motion.div> :
+                                                        <motion.div key={title} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col items-center w-full">
+                                                            <h3>
+                                                                <span className="lg:-rotate-90 lg:w-[2.25rem] whitespace-nowrap tracking-tight text-white block text-base sm:text-lg md:text-xl lg:text-4xl">{title}</span>
+                                                            </h3>
+                                                        </motion.div>
+                                                }
+                                            </AnimatePresence>
+                                        </div>
+                                    </Link>
+                                </motion.li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </section>
     )
-};
+}

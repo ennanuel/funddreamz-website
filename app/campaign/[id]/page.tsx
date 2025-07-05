@@ -18,8 +18,6 @@ import { setDefaultHeaderColors } from "@/app/_utils/header";
 
 const HEADER_COLORS = { 
     '--background': 'var(--color-gray-50)',
-    '--icon-background': 'var(--color-light-green)',
-    '--icon-color': 'var(--color-main)',
     '--main': 'var(--color-dark-green)',
     '--secondary': 'var(--color-light-green)',
     '--text-color': 'var(--color-gray-800)',

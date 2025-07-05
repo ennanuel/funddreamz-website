@@ -86,8 +86,8 @@ export default function Header() {
             <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="-mt-1 flex gap-2 items-center justify-center">
-                        <span className="p-0.25 block aspect-square rounded-full bg-[var(--icon-color)]">
-                            <span className="relative block w-10 aspect-square">
+                        <span className="relative p-0.5 block aspect-square rounded-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[var(--main)] before:opacity-10">
+                            <span className="relative block w-9 aspect-square">
                                 <Image src="/favicon.svg" fill alt="Fund dreams logo" className="block object-cover" />
                             </span>
                         </span>
@@ -139,7 +139,7 @@ export default function Header() {
                             <span className="font-semibold">Sign in</span>
                         </Link>
                         <Link href="/get-started" className="flex items-center justify-center px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">
-                            <span className="font-semibold">Get started</span>
+                            <span className="font-semibold">Start a Dream</span>
                         </Link>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GrLineChart } from "react-icons/gr";
 import { LuHandHeart } from "react-icons/lu";
 
@@ -34,7 +35,7 @@ const DONATIONS = [
 export default function DonationDetails() {
 
     return (
-        <div className="sticky top-20 rounded-2xl border-2 border-main/20 bg-white">
+        <div className="sticky top-20 rounded-2xl border-2 border-gray-200 bg-white overflow-hidden">
             <div className="flex px-6 pb-4 pt-8 flex-col border-b border-gray-100">
                 <div className="flex flex-col gap-1">
                     <h4 className="text-3xl font-semibold tracking-tighter"><span>£41,961 raised</span></h4>
@@ -48,19 +49,19 @@ export default function DonationDetails() {
                     <span className="block w-1/2 h-1.5 rounded-full bg-yellow-400"></span>
                 </span>
                 <div className="flex flex-col gap-2">
-                    <button className="flex items-center justify-center h-12 border-2 border-dark-green bg-dark-green text-green-200 rounded-full">
-                        <span className="font-semibold tracking-tighter text-sm">Donate to Dream</span>
-                    </button>
-                    <button className="flex items-center justify-center h-12 border-2 border-green-100 bg-green-100 text-dark-green rounded-full">
+                    <button className="flex items-center justify-center h-12 border-2 border-green-800 bg-green-300 text-dark-green rounded-full">
                         <span className="font-semibold tracking-tighter text-sm">Share</span>
                     </button>
+                    <Link href="/campaign/123/donate" className="flex items-center justify-center h-12 border-2 border-dark-green bg-green-400 text-dark-green rounded-full">
+                        <span className="font-semibold tracking-tighter text-sm">Donate to Dream</span>
+                    </Link>
                 </div>
                 <div className="mt-4 flex-1 flex flex-col">
-                    <div className="flex items-center gap-4">
-                        <span className="flex items-center justify-center w-10 aspect-square rounded-full bg-light-green text-dark-green">
+                    <div className="flex items-center gap-3 text-dark-purple">
+                        <span className="flex items-center justify-center w-10 aspect-square rounded-full bg-light-purple">
                             <GrLineChart size={18} />
                         </span>
-                        <span className="text-dark-green font-semibold text-sm tracking-tighter">531 people just donated</span>
+                        <span className="font-semibold text-sm tracking-tighter">531 people just donated</span>
                     </div>
                 </div>
             </div>

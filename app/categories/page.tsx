@@ -9,7 +9,7 @@ import { changeHeaderColors } from "../_utils/header";
 
 export default function Categories() {
     useEffect(() => {
-        changeHeaderColors();
+        changeHeaderColors(undefined, true);
     }, []);
 
     return (

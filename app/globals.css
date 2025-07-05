@@ -10,7 +10,7 @@
 
 @theme inline {
   --max-width-xl: var(--mw-xl);
-  --max-width-lg: var(--mw-gl);
+  --max-width-lg: var(--mw-lg);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

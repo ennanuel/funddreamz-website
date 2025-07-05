@@ -11,8 +11,6 @@ import { setDefaultHeaderColors } from "../_utils/header";
 
 const HEADER_COLORS = { 
     '--background': 'var(--color-dark-green)',
-    '--icon-background': '#b9f8cf',
-    '--icon-color': '#02a85c',
     '--main': 'var(--color-purple-200)',
     '--secondary': 'var(--color-green-900)',
     '--text-color': 'var(--color-purple-300)',

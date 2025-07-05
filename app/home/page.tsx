@@ -19,7 +19,7 @@ import { changeHeaderColors } from "../_utils/header";
 export default function Home2() {
 
     useEffect(() => {
-        changeHeaderColors();
+        changeHeaderColors(undefined, true);
     }, [])
 
     return (

@@ -79,7 +79,7 @@ export default function HomeHero() {
 
     return (
         <section className="px-4 sm:px-6 md:px-10">
-            <div className="mx-auto max-w-lg pt-12 md:pt-0 md:min-h-screen flex flex-col-reverse lg:flex-row lg:gap-20">
+            <div className="mx-auto max-w-lg pt-12 pb-16 md:pt-0 md:min-h-[calc(100vh_-_64px)] flex flex-col-reverse lg:flex-row lg:gap-20 lg:items-end">
                 <div className="flex flex-col items-center lg:items-start justify-center">
                     <h1 className="md:max-w-[12ch] text-3xl sm:text-[3rem] md:text-[4rem] text-center lg:text-left leading-[2.4rem] sm:leading-[3.6rem] md:leading-[4.6rem] font-semibold tracking-tighter">Successful <br className="block md:hidden" />fundraisers start here.</h1>
                     <p className="mt-4 text-center lg:text-left text-sm sm:text-base lg:text-lg max-w-[40ch]">Get started in just a few minutes — with helpful new tools, it&apos;s easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
@@ -100,7 +100,7 @@ export default function HomeHero() {
                 <div className="hidden sm:flex md:flex-1">
                     <ul 
                         ref={categoriesCarouselRef}
-                        className="pt-20 pb-20 w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4"
+                        className="w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4"
                     >
                         {
                             categories.map(({ title, href, image }, index) => (
@@ -109,7 +109,7 @@ export default function HomeHero() {
                                     animate={{ width: categoryWidths[index] }}
                                     onMouseOver={() => selectActiveIndex(index)}
                                     onMouseOut={startInterval}
-                                    className={`${index === activeIndex ? '' : 'aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 max-h-[560px]`}
+                                    className={`${index === activeIndex ? '' : 'aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 lg:min-h-[480px] lg:max-h-[480px]`}
                                     transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
                                 >
                                     <Link href={`/categories${href}`} className="overflow-hidden relative block w-full h-full rounded-2xl border border-gray-200">
