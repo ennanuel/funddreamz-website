@@ -143,7 +143,7 @@ export default function DonateToCampaign() {
                             <span className="text-sm font-semibold tracking-tighter">Make payment</span>
                         </button>
                         <p className="mt-10 text-sm tracking-tighter">
-                            <span>By clicking 'Paystack', you agree to FundDreamz&apos;s Terms of <span className="font-semibold text-gray-800">Service</span> and <span className="font-semibold text-gray-800">Privacy Notice</span>. Learn more about <span className="font-semibold text-gray-800">pricing and fees</span>.</span>
+                            <span>By clicking &apos;Paystack&apos;, you agree to FundDreamz&apos;s Terms of <span className="font-semibold text-gray-800">Service</span> and <span className="font-semibold text-gray-800">Privacy Notice</span>. Learn more about <span className="font-semibold text-gray-800">pricing and fees</span>.</span>
                         </p>
                         <div className="mt-6 pt-6 border-t border-gray-200 flex gap-4">
                             <div className="">
