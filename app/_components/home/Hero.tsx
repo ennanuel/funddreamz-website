@@ -89,7 +89,7 @@ export default function HomeHero() {
                     <p className="mt-4 font-semibold tracking-tighter text-left text-xl max-w-[40ch]">
                         <span className="text-gray-500">FundDreamz is a platform that connects dreamers with backers, providing a space where dreams can thrive. Our mission is to make fundraising accessible to anyone with a dream and passion to pursue.</span>
                     </p>
-                    <button className="mt-8 h-12 rounded-full px-6 sm:px-10 bg-main text-white w-fit min-w-50 sm:min-w-60">
+                    <button className="mt-8 h-12 rounded-full px-6 sm:px-10 bg-green-400 outline-3 outline-dark-green text-dark-green w-fit min-w-50 sm:min-w-60">
                         <span className="tracking-tighter font-semibold whitespace-nowrap">Start your Dream</span>
                     </button>
                     <ul className="mt-8 flex items-center gap-6">
@@ -112,10 +112,10 @@ export default function HomeHero() {
                             categories.map(({ title, href, image }, index) => (
                                 <motion.li 
                                     key={title} 
-                                    animate={{ width: categoryWidths[index], borderRadius: index === activeIndex ? 24 : 40 }}
+                                    animate={{ width: categoryWidths[index] }}
                                     onMouseOver={() => selectActiveIndex(index)}
                                     onMouseOut={startInterval}
-                                    className={`${index === activeIndex ? '' : ''} min-h-40 md:min-h-50 h-[480px] overflow-hidden`}
+                                    className={`${index === activeIndex ? 'rounded-[24px]' : 'rounded-[40px]'} transition-[border-radius] duration-500 ease-expo min-h-40 md:min-h-50 h-[480px] overflow-hidden`}
                                     transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
                                 >
                                     <Link 
