@@ -44,36 +44,48 @@ export const CATEGORIES = [
         title: "Your cause",
         href: "/your-cause",
         image: "/home/your-cause1.jpg",
+        iconBackground: "bg-light-purple",
+        textColor: "text-dark-purple",
         Icon: FaPersonBreastfeeding
     },
     {
         title: "Emergency",
         href: "/emergency",
         image: "/home/emergency1.jpg",
+        iconBackground: "bg-light-orange",
+        textColor: "text-dark-orange",
         Icon: TbMedicalCross
     },
     {
         title: "Medical",
         href: "/medical",
         image: "/home/emergency2.jpg",
+        iconBackground: "bg-light-green",
+        textColor: "text-green-600",
         Icon: GiHealthCapsule
     },
     {
         title: "Business",
         href: "/business",
         image: "/home/business2.jpg",
+        iconBackground: "bg-blue-100",
+        textColor: "text-blue-900",
         Icon: BiSolidBriefcase
     },
     {
         title: "Education",
         href: "/education",
         image: "/home/education1.jpg",
+        iconBackground: "bg-yellow-100",
+        textColor: "text-yellow-600",
         Icon: IoIosSchool
     },
     {
         title: "Animal",
         href: "/animal",
         image: "/home/agrculture3.jpg",
+        iconBackground: "bg-green-100",
+        textColor: "text-green-600",
         Icon: MdPets
     },
 ];
@@ -189,25 +201,25 @@ export const CATEGORIES_2 = [
     {
         title: "Yourself",
         description: "Funds are delivered to your bank account for your own use",
-        backgroundColor: "bg-orange-400",
-        textColor: "text-orange-900",
-        borderColor: "border-orange-900/40",
+        textColor: "text-blue-600",
+        iconBackground: "bg-blue-100",
+        hoverBorder: "hover:border-blue-200",
         Icon: FaPersonBreastfeeding
     },
     {
         title: "Friends and family",
         description: "You’ll invite a beneficiary to receive funds or distribute them yourself",
-        backgroundColor: "bg-blue-900",
-        textColor: "text-blue-200",
-        borderColor: "border-blue-200/40",
+        textColor: "text-green-600",
+        iconBackground: "bg-light-green",
+        hoverBorder: "hover:border-green-200",
         Icon: MdFamilyRestroom
     },
     {
         title: "Charity",
         description: "Funds are delivered to your chosen nonprofit for you",
-        backgroundColor: "bg-purple-800",
-        textColor: "text-purple-200",
-        borderColor: "border-purple-200/40",
+        textColor: "text-purple-500",
+        iconBackground: "bg-purple-100",
+        hoverBorder: "hover:border-purple-200",
         Icon: FaHandHoldingHeart
     }
 ];

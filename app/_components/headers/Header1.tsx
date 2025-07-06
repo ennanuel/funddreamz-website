@@ -86,15 +86,11 @@ export default function Header() {
             <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="-mt-1 flex gap-2 items-center justify-center">
-                        <span className="relative p-0.5 block aspect-square rounded-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[var(--main)] before:opacity-10">
-                            <span className="relative block w-9 aspect-square">
+                        <span className="relative p-0.5 block aspect-square rounded-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[var(--main)] before:opacity-80">
+                            <span className="relative block w-10 aspect-square">
                                 <Image src="/favicon.svg" fill alt="Fund dreams logo" className="block object-cover" />
                             </span>
                         </span>
-                        <div className="flex items-center text-[var(--main)] font-bold text-2xl leading-[1.3rem] tracking-tighter">
-                            <span>f.</span>
-                            <span>dreamz</span>
-                        </div>
                     </Link>
                     <ul className="flex items-center">
                         {

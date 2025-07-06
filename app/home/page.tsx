@@ -14,6 +14,7 @@ import HowItWorks from "../_components/home/HowItWorks";
 import Tips from "../_components/home/Tips";
 
 import { changeHeaderColors } from "../_utils/header";
+import About from "../_components/home/About";
 
 
 export default function Home2() {
@@ -26,6 +27,7 @@ export default function Home2() {
         <div className="font-dm-sans bg-gray-100">
             <Hero />
             <Badges />
+            <About />
             <Demo />
             <Discover />
             <FeaturedTopics />

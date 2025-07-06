@@ -24,7 +24,7 @@ const CATEGORY_VARIANTS = {
     }
 }
 
-const DEFAULT_CATEGORY_WIDTH = 100;
+const DEFAULT_CATEGORY_WIDTH = 80;
 
 export default function HomeHero() {
     const interval = useRef<NodeJS.Timeout>(null);
@@ -78,13 +78,19 @@ export default function HomeHero() {
     }, [activeIndex, categories]);
 
     return (
-        <section className="px-4 sm:px-6 md:px-10">
+        <section className="px-10">
             <div className="mx-auto max-w-lg pt-12 pb-16 md:pt-0 md:min-h-[calc(100vh_-_64px)] flex flex-col-reverse lg:flex-row lg:gap-20 lg:items-end">
                 <div className="flex flex-col items-center lg:items-start justify-center">
-                    <h1 className="md:max-w-[12ch] text-3xl sm:text-[3rem] md:text-[4rem] text-center lg:text-left leading-[2.4rem] sm:leading-[3.6rem] md:leading-[4.6rem] font-semibold tracking-tighter">Successful <br className="block md:hidden" />fundraisers start here.</h1>
-                    <p className="mt-4 tracking-tighter text-left text-xl font-semibold max-w-[40ch]">Get started in just a few minutes — with helpful new tools, it&apos;s easier than ever to pick the perfect title, write a compelling story, and share it with the world.</p>
+                    <h1 className="text-[4rem] leading-[4.6rem] font-bold tracking-tighter">
+                        <span>The journey </span><br />
+                        <span>to your Dream</span><br />
+                        <span>starts here.</span>
+                    </h1>
+                    <p className="mt-4 font-semibold tracking-tighter text-left text-xl max-w-[40ch]">
+                        <span className="text-gray-500">FundDreamz is a platform that connects dreamers with backers, providing a space where dreams can thrive. Our mission is to make fundraising accessible to anyone with a dream and passion to pursue.</span>
+                    </p>
                     <button className="mt-8 h-12 rounded-full px-6 sm:px-10 bg-main text-white w-fit min-w-50 sm:min-w-60">
-                        <span className="tracking-tighter font-semibold whitespace-nowrap">Start a fundraiser</span>
+                        <span className="tracking-tighter font-semibold whitespace-nowrap">Start your Dream</span>
                     </button>
                     <ul className="mt-8 flex items-center gap-6">
                         {
@@ -100,19 +106,22 @@ export default function HomeHero() {
                 <div className="hidden sm:flex md:flex-1">
                     <ul 
                         ref={categoriesCarouselRef}
-                        className="w-full h-full flex justify-center lg:justify-end gap-2 sm:gap-4"
+                        className="w-full h-full flex justify-center lg:justify-end gap-3"
                     >
                         {
                             categories.map(({ title, href, image }, index) => (
                                 <motion.li 
                                     key={title} 
-                                    animate={{ width: categoryWidths[index] }}
+                                    animate={{ width: categoryWidths[index], borderRadius: index === activeIndex ? 24 : 40 }}
                                     onMouseOver={() => selectActiveIndex(index)}
                                     onMouseOut={startInterval}
-                                    className={`${index === activeIndex ? '' : 'aspect-square lg:aspect-auto'} min-h-40 md:min-h-50 lg:min-h-[480px] lg:max-h-[480px]`}
+                                    className={`${index === activeIndex ? '' : ''} min-h-40 md:min-h-50 h-[480px] overflow-hidden`}
                                     transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
                                 >
-                                    <Link href={`/categories${href}`} className="overflow-hidden relative block w-full h-full rounded-2xl border border-gray-200">
+                                    <Link 
+                                        href={`/categories${href}`} 
+                                        className="relative block w-full h-full border border-gray-200"
+                                    >
                                         <Image src={image} fill alt={`${title} category image`} className="object-cover" />
                                         <div className={`${index === activeIndex ? 'to-80% via-transparent to-gray-500/80' : 'via-gray-500/50 to-gray-500'} bg-gradient-to-b p-4 justify-between relative w-full h-full flex flex-col gap-4`}>
                                             <motion.span

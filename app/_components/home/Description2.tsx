@@ -16,7 +16,7 @@ export default function Description2() {
     const translateY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
-        <div ref={descriptionRef} className='bg-green-200'>
+        <div ref={descriptionRef} className='bg-gray-50'>
             <motion.div style={{ scale, y: translateY }} className="px-10 bg-dark-green rounded-b-4xl overflow-clip">
                 <section className="mx-auto max-w-lg w-full min-h-screen flex gap-20">
                     <div className="pt-120 pb-20 flex flex-col gap-10">

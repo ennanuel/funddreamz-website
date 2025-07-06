@@ -45,7 +45,7 @@ export default function Badges() {
     }, []);
 
     return (
-        <div onMouseOver={slowDownMove} onMouseOut={revertToNormalSpeed} className="w-full flex overflow-hidden bg-light-orange py-6">
+        <div onMouseOver={slowDownMove} onMouseOut={revertToNormalSpeed} className="group w-full flex overflow-hidden bg-light-orange py-6">
             <CategorySlider x={sliderMotion} />
             <CategorySlider x={sliderMotion} />
         </div>
@@ -59,16 +59,15 @@ function CategorySlider({ x }: { x: MotionValue }) {
             className="w-fit flex gap-4 overflow-visible pr-4"
         >
             {
-                CATEGORIES.map(({ title, Icon, href }) => (
+                CATEGORIES.map(({ title, Icon, iconBackground, textColor, href }) => (
                     <li key={title}>
-                        <Link draggable={false} href={`/category${href}`} className={`bg-white overflow-hidden relative min-w-[280px] flex justify-between p-4 pb-4 rounded-2xl`}>
+                        <Link draggable={false} href={`/category${href}`} className={`${textColor} bg-white overflow-hidden relative min-w-[280px] flex justify-between p-2 rounded-full`}>
                             <div className="flex items-center gap-4">
-                                <span className="flex items-center justify-center w-10 aspect-square rounded-full bg-light-orange text-dark-orange">
-                                    <Icon size={20} />
+                                <span className={`relative flex items-center justify-center w-14 aspect-square rounded-full`}>
+                                    <span className={`${iconBackground} absolute top-0 left-0 w-full h-full rounded-full scale-80 group-hover:scale-100 duration-500 transition-transform`} />
+                                    <Icon size={20} className='relative' />
                                 </span>
-                                <div className="flex flex-col">
-                                    <span className="font-semibold text-xl tracking-tighter text-dark-orange">{title}</span>
-                                </div>
+                                <span className="font-semibold text-xl tracking-tighter">{title}</span>
                             </div>
                         </Link>
                     </li>
