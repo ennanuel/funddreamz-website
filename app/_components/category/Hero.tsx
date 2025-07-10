@@ -1,4 +1,4 @@
-import { illustration2 } from "@/app/_assets/images/illustrations";
+
 import Image from "next/image";
 import { FaQuoteRight } from "react-icons/fa6";
 

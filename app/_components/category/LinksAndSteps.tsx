@@ -107,8 +107,8 @@ function Tools() {
         <div className="flex-1 overflow-hidden bg-white rounded-lg px-8 py-4 mb-6 flex items-center gap-2">
             {
                 [PiBandaidsLight, PiBriefcase, LuSchool, PiFarm, PiPawPrint, ].map((Icon, index) => (
-                    <div className="flex flex-col items-center gap-2">
-                        <span key={index} className="flex w-20 aspect-square rounded-lg border border-gray-200 items-center justify-center">
+                    <div key={index} className="flex flex-col items-center gap-2">
+                        <span className="flex w-20 aspect-square rounded-lg border border-gray-200 items-center justify-center">
                             <Icon size={36} />
                         </span>
                         <span className="block w-14 h-2 rounded-full bg-gray-100"></span>
