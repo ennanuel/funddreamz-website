@@ -1,5 +1,6 @@
 
 import board from "./jo-szczepanska-bjemWZcNF34-unsplash.jpg";
+import chef from "./phyllis-lilienthal-1TH4MYdd-M8-unsplash.jpg";
 import children from "./pexels-kenechukwu-emmanuel-1635620388-32459420.jpg";
 import children2 from "./joshua-onadipe-0egim8vGFwQ-unsplash.jpg";
 import children3 from "./muhammad-taha-ibrahim-JXdTGEGoitE-unsplash.jpg";
@@ -16,6 +17,7 @@ import volunteer3 from "./pexels-lagosfoodbank-9090841.jpg";
 
 export {
     board,
+    chef,
     children,
     children2,
     children3,

@@ -1,27 +1,41 @@
-import HomeHero from "./_components/HomeHero";
-import Stats from "./_components/Stats";
-import QuickDemo from "./_components/QuickDemo";
-import DiscoverFundraisers from "./_components/DiscoverFundraisers";
-import FeaturedTopics from "./_components/FeaturedTopics";
-import Description1 from "./_components/Description1";
-import HowItWorks from "./_components/HowItWorks";
-import Description2 from "./_components/Description2";
-import Categories from "./_components/Categories";
-import Tips from "./_components/Tips";
+"use client";
 
-export default function Home() {
-  return (
-    <div className="">
-      <HomeHero />
-      <Stats />
-      <QuickDemo />
-      <DiscoverFundraisers />
-      <FeaturedTopics />
-      <Description1 />
-      <HowItWorks />
-      <Description2 />
-      <Categories />
-      <Tips />
-    </div>
-  );
+import { useEffect } from "react";
+
+import Badges from "./_components/home/Badges";
+import Categories from "./_components/home/Categories";
+import Demo from "./_components/home/Demo";
+import Description1 from "./_components/home/Description1";
+import Description2 from "./_components/home/Description2";
+import Discover from "./_components/home/Discover";
+import FeaturedTopics from "./_components/home/FeaturedTopics";
+import Hero from "./_components/home/Hero";
+import HowItWorks from "./_components/home/HowItWorks";
+import Tips from "./_components/home/Tips";
+
+import { changeHeaderColors } from "./_utils/header";
+import About from "./_components/home/About";
+
+
+export default function Home2() {
+
+    useEffect(() => {
+        changeHeaderColors(undefined, true);
+    }, [])
+
+    return (
+        <div className="font-dm-sans bg-gray-100">
+            <Hero />
+            <Badges />
+            <About />
+            <Demo />
+            <Discover />
+            <FeaturedTopics />
+            <Description1 />
+            <Description2 />
+            <HowItWorks />
+            <Categories />
+            <Tips />
+        </div>
+    )
 }

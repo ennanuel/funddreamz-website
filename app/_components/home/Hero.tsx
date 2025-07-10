@@ -119,7 +119,7 @@ export default function HomeHero() {
                                     transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
                                 >
                                     <Link 
-                                        href={`/categories${href}`} 
+                                        href={`/category${href}`} 
                                         className="relative block w-full h-full border border-gray-200"
                                     >
                                         <Image src={image} fill alt={`${title} category image`} className="object-cover" />

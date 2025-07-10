@@ -36,13 +36,12 @@ export default function Categories() {
 type CategoryProps = {
     title: string;
     description: string;
+    background: string;
     iconBackground: string;
-    hoverBorder: string;
-    textColor: string;
     Icon: IconType
 }
 
-function Category({ title, description, textColor, iconBackground, hoverBorder, Icon }: CategoryProps) {
+function Category({ title, description, iconBackground, background, Icon }: CategoryProps) {
     const boxRef = useRef<HTMLDivElement>(null);
     const rotate = useMotionValue('translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0.0028deg) rotateY(0.004deg) rotateZ(0deg) skew(0deg, 0deg)');
 
@@ -74,16 +73,16 @@ function Category({ title, description, textColor, iconBackground, hoverBorder, 
             >
                 <motion.div 
                     style={{ transform: rotate, willChange: 'transform', transformStyle: 'preserve-3d' }} 
-                    className={`${hoverBorder} bg-white border-2 border-gray-100 w-full h-full min-h-[480px] relative p-6 flex flex-col rounded-2xl overflow-hidden justify-between gap-6 not-[:hover]:transition-transform not-[:hover]:duration-500 not-[:hover]:ease-expo`}>
-                    <div className={`${iconBackground} ${textColor} flex items-center justify-center w-16 aspect-square rounded-full`}>
-                        <Icon size={40} className={`${textColor}`} />
+                    className={`${background} border-2 border-gray-100 w-full h-full min-h-[480px] relative p-6 flex flex-col rounded-4xl overflow-hidden justify-between gap-6 not-[:hover]:transition-transform not-[:hover]:duration-500 not-[:hover]:ease-expo`}>
+                    <div className={`${iconBackground} flex items-center justify-center w-16 aspect-square rounded-full`}>
+                        <Icon size={32} className={`text-black`} />
                     </div>
                     <div className="relative flex flex-col gap-4">
                         <h2>
-                            <span className="text-gray-800 text-4xl font-semibold tracking-tighter">{title}</span>
+                            <span className="text-black/80 text-4xl font-semibold tracking-tighter">{title}</span>
                         </h2>
                         <p>
-                            <span className="text-gray-500 opacity-60 text-xl tracking-tighter font-normal">{description}</span>
+                            <span className="text-black/50 font-semibold opacity-60 text-xl tracking-tighter">{description}</span>
                         </p>
                     </div>
                 </motion.div>

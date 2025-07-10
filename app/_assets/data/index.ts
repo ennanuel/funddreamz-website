@@ -201,25 +201,22 @@ export const CATEGORIES_2 = [
     {
         title: "Yourself",
         description: "Funds are delivered to your bank account for your own use",
-        textColor: "text-blue-600",
-        iconBackground: "bg-blue-100",
-        hoverBorder: "hover:border-blue-200",
+        background: "bg-blue-100",
+        iconBackground: "bg-blue-400/20",
         Icon: FaPersonBreastfeeding
     },
     {
         title: "Friends and family",
         description: "You’ll invite a beneficiary to receive funds or distribute them yourself",
-        textColor: "text-green-600",
-        iconBackground: "bg-light-green",
-        hoverBorder: "hover:border-green-200",
+        background: "bg-light-orange",
+        iconBackground: "bg-yellow-400/20",
         Icon: MdFamilyRestroom
     },
     {
         title: "Charity",
         description: "Funds are delivered to your chosen nonprofit for you",
-        textColor: "text-purple-500",
-        iconBackground: "bg-purple-100",
-        hoverBorder: "hover:border-purple-200",
+        background: "bg-light-purple",
+        iconBackground: "bg-purple-300",
         Icon: FaHandHoldingHeart
     }
 ];

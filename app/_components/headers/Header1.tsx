@@ -85,12 +85,9 @@ export default function Header() {
         >
             <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <Link href="/" className="-mt-1 flex gap-2 items-center justify-center">
-                        <span className="relative p-0.5 block aspect-square rounded-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[var(--main)] before:opacity-80">
-                            <span className="relative block w-10 aspect-square">
-                                <Image src="/favicon.svg" fill alt="Fund dreams logo" className="block object-cover" />
-                            </span>
-                        </span>
+                    <Link href="/" className="-mt-1 flex gap-1 items-center justify-center">
+                        <Image src="/favicon.svg" width={40} height={40} alt="Fund dreams logo" className="w-10 aspect-square block object-cover border-2 border-[#07fb08] rounded-full" />
+                        <Image src="/logo-cover.png" alt="Logo cover" width={160} height={64} className="h-8 w-auto object-cover" />
                     </Link>
                     <ul className="flex items-center">
                         {
