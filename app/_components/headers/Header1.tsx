@@ -13,6 +13,7 @@ import SubHeader from "./SubHeader";
 
 import { LINKS } from "../../_assets/data/header";
 import { changeHeaderColors, revertHeaderColorsToDefault } from '../../_utils/header';
+import { SIGN_UP_LINK } from "@/app/_assets/data/links";
 
 const ALT_HEADER_COLORS = {
     '--background': '#ffffff',
@@ -131,9 +132,9 @@ export default function Header() {
                         <Link href="/sign-in" className="px-6 rounded-full h-10 hover:bg-[var(--secondary)] text-[var(--main)] flex items-center justify-center">
                             <span className="font-semibold">Sign in</span>
                         </Link>
-                        <Link href="/get-started" className="flex items-center justify-center px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">
+                        <a href={SIGN_UP_LINK} className="flex items-center justify-center px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">
                             <span className="font-semibold">Start a Dream</span>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </nav>

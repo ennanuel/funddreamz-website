@@ -30,16 +30,8 @@ export default function Demo() {
     const [activeDemoIndex, setActiveDemoIndex] = useState(0);
     const activeDemo = useMemo(() => DEMOS[activeDemoIndex] || DEMOS[0], [activeDemoIndex]);
 
-    const scaleX = useMotionValue(0);
     const stopAnimation = () => {
         if(controls.current) controls.current.stop()
-    };
-    const startAnimation = () => {
-        controls.current = animate(scaleX, [0, 1], { duration: DURATION_IN_SECONDS, ease: 'linear' });
-    };
-    const resetAnimation = () => {
-        stopAnimation();
-        startAnimation();
     };
     const stopInterval = () => {
         if (timeout.current) clearTimeout(timeout.current);
@@ -52,17 +44,14 @@ export default function Demo() {
         stopInterval();
         setActiveDemoIndex(index);
         startInterval();
-        resetAnimation();
     };
     const nextActiveDemo = () => {
         setActiveDemoIndex((prevIndex) => {
             const nextIndex = prevIndex < (DEMOS.length - 1) ? prevIndex + 1 : 0;
             return nextIndex;
         });
-        resetAnimation();
     };
     useEffect(() => {
-        startAnimation();
         stopInterval();
         startInterval();
 
@@ -118,28 +107,38 @@ export default function Demo() {
                     </div>
                 </AnimatePresence>
                 <div className="flex-1 flex justify-end gap-6">
-                    <div className="mt-16">
-                        <button className="flex items-center justify-center w-10 aspect-square rounded-full text-dark-green hover:bg-dark-green hover:text-green-200">
-                            <FaPlay size={16} className="-mr-0.5" />
-                        </button>
-                    </div>
-                    <div className="relative h-full w-full max-w-[400px] flex flex-col gap-6">
-                        <ul className="flex items-center gap-0">
+                    <div className="relative h-full w-full max-w-[400px] flex flex-col justify-end gap-6">
+                        <ul className="flex items-center gap-1">
                             {
                                 DEMOS.map(({ Icon, title, shortTitle }, index) => (
                                     <li key={title}>
                                         <button 
                                             onClick={() => selectActiveDemo(index)} 
-                                            className={`${index === activeDemoIndex ? 'text-green-900' : 'text-green-900/60'} flex gap-2 items-center justify-center h-10 px-4 hover:bg-green-900/10 rounded-full`}
+                                            className={`${index === activeDemoIndex ? 'text-green-900' : 'text-green-900/60'} relative overflow-hidden flex gap-2 items-center justify-center h-10 px-4 hover:bg-green-900/10 rounded-full`}
                                         >
                                             <Icon size={20} />
                                             <span className="font-semibold tracking-tighter text-lg">{shortTitle}</span>
+                                            {
+                                                activeDemoIndex === index ?
+                                                    <motion.span 
+                                                        initial={{ scaleX: 0 }} 
+                                                        animate={{ scaleX: 1 }} 
+                                                        transition={{ duration: DURATION_IN_SECONDS - 0.1, ease: 'linear' }} 
+                                                        className="absolute origin-left block top-0 left-0 w-full h-full bg-dark-green/10" 
+                                                    /> :
+                                                    null
+                                            }
                                         </button>
                                     </li>
                                 ))
                             }
                         </ul>
-                        <div className="flex flex-col relative w-full h-full bg-black  rounded-t-4xl pb-0 pt-8 px-2">
+                        <div className="flex flex-col relative w-full flex-1 max-h-[640px] bg-black  rounded-t-4xl pb-0 pt-8 px-2">
+                            <div className="absolute top-0 right-[calc(100%_+_20px)]">
+                                <button className="flex items-center justify-center w-10 aspect-square rounded-full text-dark-green hover:bg-dark-green hover:text-green-200">
+                                    <FaPlay size={16} className="-mr-0.5" />
+                                </button>
+                            </div>
                             <div className="absolute top-40 right-full flex flex-col gap-4">
                                 <span className="block w-1.5 h-14 rounded-l-full bg-black" />
                                 <span className="block w-1.5 h-14 rounded-l-full bg-black" />
@@ -148,9 +147,6 @@ export default function Demo() {
                                 <span className="block w-1.5 h-14 rounded-r-full bg-black" />
                             </div>
                             <div className="w-full flex-1 rounded-t-3xl bg-green-300"></div>
-                            <span className="block bg-green-300 w-full">
-                                <motion.span key={activeDemoIndex} style={{ scaleX }} className="origin-left block w-full h-2 bg-white" />
-                            </span>
                         </div>
                     </div>
                 </div>

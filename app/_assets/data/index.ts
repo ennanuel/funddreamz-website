@@ -41,48 +41,48 @@ export const BADGES = [
 
 export const CATEGORIES = [
     {
-        title: "Your cause",
-        href: "/your-cause",
+        title: "Individuals",
+        href: "/individuals",
         image: "/home/your-cause1.jpg",
         iconBackground: "bg-light-purple",
         textColor: "text-dark-purple",
         Icon: FaPersonBreastfeeding
     },
     {
-        title: "Emergency",
-        href: "/emergency",
+        title: "Communities",
+        href: "/communities",
         image: "/home/emergency1.jpg",
         iconBackground: "bg-light-orange",
         textColor: "text-dark-orange",
         Icon: TbMedicalCross
     },
     {
-        title: "Medical",
-        href: "/medical",
+        title: "Organizations",
+        href: "/organizations",
         image: "/home/emergency2.jpg",
         iconBackground: "bg-light-green",
         textColor: "text-green-600",
         Icon: GiHealthCapsule
     },
     {
-        title: "Business",
-        href: "/business",
+        title: "Charity cases",
+        href: "/charity-cases",
         image: "/home/business2.jpg",
         iconBackground: "bg-blue-100",
         textColor: "text-blue-900",
         Icon: BiSolidBriefcase
     },
     {
-        title: "Education",
-        href: "/education",
+        title: "NGOs",
+        href: "/ngos",
         image: "/home/education1.jpg",
         iconBackground: "bg-yellow-100",
         textColor: "text-yellow-600",
         Icon: IoIosSchool
     },
     {
-        title: "Animal",
-        href: "/animal",
+        title: "Startups",
+        href: "/startups-seeking-investors",
         image: "/home/agrculture3.jpg",
         iconBackground: "bg-green-100",
         textColor: "text-green-600",

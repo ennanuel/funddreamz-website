@@ -8,6 +8,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import { BADGES, CATEGORIES } from "@/app/_assets/data";
 import { AnimatePresence, motion } from 'framer-motion';
+import { CREATE_FUNDRAISER_LINK } from "@/app/_assets/data/links";
 
 const CATEGORY_VARIANTS = {
     exit: {
@@ -89,9 +90,9 @@ export default function HomeHero() {
                     <p className="mt-4 font-semibold tracking-tighter text-left text-xl max-w-[40ch]">
                         <span className="text-gray-500">FundDreamz is a platform that connects dreamers with backers, providing a space where dreams can thrive. Our mission is to make fundraising accessible to anyone with a dream and passion to pursue.</span>
                     </p>
-                    <button className="mt-8 h-12 rounded-full px-6 sm:px-10 bg-green-400 outline-3 outline-dark-green text-dark-green w-fit min-w-50 sm:min-w-60">
+                    <a href={CREATE_FUNDRAISER_LINK} className="mt-8 h-12 flex items-center justify-center rounded-full px-6 sm:px-10 bg-green-400 outline-3 outline-dark-green text-dark-green w-fit min-w-50 sm:min-w-60">
                         <span className="tracking-tighter font-semibold whitespace-nowrap">Start your Dream</span>
-                    </button>
+                    </a>
                     <ul className="mt-8 flex items-center gap-6">
                         {
                             BADGES.map(({ title, Icon }) => (

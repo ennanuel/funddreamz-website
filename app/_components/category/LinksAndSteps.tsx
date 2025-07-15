@@ -145,10 +145,10 @@ function Payment() {
                 <span className="text-lg font-semibold tracking-tighter">Transfers</span>
                 <div className="mt-1 flex-1 flex flex-col p-3 rounded-xl bg-dark-green">
                     <span className="text-green-100 text-2xl font-semibold tracking-tighter">$2,305</span>
-                    <span className="text-green-100 font-semibold tracking-tighter text-xs">Payment made by <span className="font-bold">person...</span></span>
+                    <span className="text-green-100 font-semibold tracking-tighter text-xs">Payment made by <span className="font-bold">anonymous...</span></span>
                 </div>
                 <span className="block h-4 rounded-t-full bg-light-green"></span>
             </div>
         </div>
     )
-}
+};
