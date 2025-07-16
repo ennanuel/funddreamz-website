@@ -12,7 +12,7 @@ export default function Tips() {
                     <h2 className="text-2xl tracking-tighter font-semibold">
                         <span className="text-purple-200/80">Top crowdfunding tips</span>
                     </h2>
-                    <Link href="/" className="bg-purple-400 text-purple-900 px-6 h-10 flex items-center justify-center rounded-full">
+                    <Link href="/" className="bg-purple-300 text-purple-900 px-6 h-10 flex items-center justify-center rounded-full">
                         <span className="text-base tracking-tighter font-semibold">View all</span>
                     </Link>
                 </div>

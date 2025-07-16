@@ -186,14 +186,25 @@ export const TOPICS = [
     },
 ];
 
-export const POINTS = [
+export const POINTS_1 = [
     {
-        title: "Verified",
-        subTitle: "Campaigns"
+        title: "Payments",
+        subTitle: "Secured and verified"
     },
     {
-        title: "Fund",
-        subTitle: "Protection"
+        title: "Easy startup",
+        subTitle: "No registrations needed"
+    },
+]
+
+export const POINTS_2 = [
+    {
+        title: "Transparency",
+        subTitle: "Clear campaign tracking"
+    },
+    {
+        title: "Legit campaigns",
+        subTitle: "Vetted & Verified"
     },
 ];
 

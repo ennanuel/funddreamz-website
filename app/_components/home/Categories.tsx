@@ -16,7 +16,7 @@ export default function Categories() {
         <div className="bg-gray-50 px-10">
             <section className="mx-auto max-w-lg w-full min-h-screen pt-24 pb-20 flex flex-col gap-20">
                 <div className="flex flex-col gap-4">
-                    <h2><span className="font-semibold text-5xl tracking-tighter text-gray-800">Fundraise for anyone</span></h2>
+                    <h2 className="font-bold text-6xl tracking-tighter"><span className="text-gray-800">Fundraise for anyone</span></h2>
                     <p><span className="font-semibold text-3xl tracking-tighter text-gray-500">Pick a category that best fits you fundraising goal.</span></p>
                 </div>
                 <ul className="flex-1 grid grid-cols-3 gap-6">

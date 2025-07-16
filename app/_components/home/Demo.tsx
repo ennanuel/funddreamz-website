@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 import { DEMOS } from "../../_assets/data";
-import { AnimatePresence, motion, useMotionValue, AnimationPlaybackControls, animate } from 'framer-motion';
+import { AnimatePresence, motion, AnimationPlaybackControls } from 'framer-motion';
 
 
 const DURATION_IN_SECONDS = 5;

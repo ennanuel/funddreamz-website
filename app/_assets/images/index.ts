@@ -11,9 +11,13 @@ import peopleHugging from "./aho-lBbqk-JxIS8-unsplash.jpg";
 import peopleSharing from "./francis-odeyemi-O8SpYxOFnK8-unsplash.jpg";
 import personInCar from "./joshua-oluwagbemiga-xpTsS9PJMXQ-unsplash.jpg";
 import personTyping from "./daoud-abismail-gbxI8Wi4ZkQ-unsplash.jpg";
+import smilingYouth from "./smiling-yout.png";
+import smilingYouth2 from "./smiling-yout2.png";
 import volunteer1 from "./pexels-rdne-6647128.jpg";
 import volunteer2 from "./pexels-rdne-6646816.jpg";
 import volunteer3 from "./pexels-lagosfoodbank-9090841.jpg";
+import youth from "./yout-no-bg.webp";
+import youths from "./youts-no-bg.webp";
 
 export {
     board,
@@ -28,7 +32,11 @@ export {
     peopleSharing,
     personInCar,
     personTyping,
+    smilingYouth,
+    smilingYouth2,
     volunteer1,
     volunteer2,
-    volunteer3
+    volunteer3,
+    youth,
+    youths
 }
