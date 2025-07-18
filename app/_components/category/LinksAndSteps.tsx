@@ -2,6 +2,20 @@ import { FiLink } from "react-icons/fi";
 import { LuSchool } from "react-icons/lu";
 import { PiBandaidsLight, PiBriefcase, PiFarm, PiPawPrint } from "react-icons/pi";
 
+interface HowItWorks {
+    step: string;
+    title: string;
+    description: string;
+};
+
+interface LinksAndStepsProps {
+    howItWorks: HowItWorks[];
+    callToActionMiddle: {
+        text: string;
+        link: string;
+    }
+};
+
 const LINKS = [
     {
         title: "How to start",
@@ -30,29 +44,14 @@ const LINKS = [
     }
 ];
 
-const STEPS = [
-    {
-        heading: "Step 1",
-        title: "Our tools help create your fundraiser",
-        description: "Click the ‘Start a Dream button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime.",
-        Element: Tools
-    },
-    {
-        heading: "Step 2",
-        title: "Share your fundraiser link to reach donors",
-        description: "Once live, share your fundraiser link with friends and family to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your GoFundMe dashboard.",
-        Element: Share
-    },
-    {
-        heading: "Step 3",
-        title: "Securely receive the funds you raise",
-        description: "Add your bank information to securely start receiving funds or invite your intended recipient to add theirs. You don’t need to reach your fundraising goal to receive your money.",
-        Element: Payment
-    }
-]
+const STEP_ELEMENTS = [
+    Tools,
+    Share,
+    Payment
+];
 
 
-export default function LinksAndSteps() {
+export default function LinksAndSteps({ howItWorks, callToActionMiddle }: LinksAndStepsProps) {
 
     return (
         <div className="px-10 bg-white">
@@ -75,11 +74,17 @@ export default function LinksAndSteps() {
                 </h3>
                 <ul className="mt-10 grid grid-cols-3 gap-5">
                     {
-                        STEPS.map(({ heading, title, description, Element }) => (
+                        howItWorks.map(({ step, title, description }, index) => (
                             <li key={title} className="pb-8 bg-purple-100 rounded-3xl overflow-hidden">
                                 <div className="relative bg-light-purple min-h-60 p-6 pb-0 flex flex-col gap-6 justify-between">
-                                    <span className="h-6 w-fit flex items-center justify-center rounded-full px-3 bg-dark-purple text-light-purple text-sm font-semibold tracking-tighter">{heading}</span>
-                                    <Element />
+                                    <span className="h-6 w-fit flex items-center justify-center rounded-full px-3 bg-dark-purple text-light-purple text-sm font-semibold tracking-tighter">{step}</span>
+                                    {
+                                        index === 0 ?
+                                            <Tools /> :
+                                            index === 1 ?
+                                                <Share /> :
+                                                <Payment />
+                                    }
                                 </div>
                                 <div className="mt-6 flex flex-col gap-6 p-6">
                                     <h4 className="text-2xl font-semibold tracking-tighter">
@@ -93,9 +98,9 @@ export default function LinksAndSteps() {
                         ))
                     }
                 </ul>
-                <button className="my-24 w-fit h-12 px-8 flex items-center justify-center mx-auto rounded-full outline-2 outline-dark-green bg-green-400 text-dark-green">
-                    <span className="font-semibold tracking-tighter">Start your Dream</span>
-                </button>
+                <a href={callToActionMiddle.link} className="my-24 w-fit h-12 px-8 flex items-center justify-center mx-auto rounded-full outline-2 outline-dark-green bg-green-400 text-dark-green">
+                    <span className="font-semibold tracking-tighter">{callToActionMiddle.text}</span>
+                </a>
             </section>
         </div>
     )

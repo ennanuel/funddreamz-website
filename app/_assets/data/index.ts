@@ -42,50 +42,62 @@ export const BADGES = [
 export const CATEGORIES = [
     {
         title: "Individuals",
-        href: "/individuals",
+        description: "Fund personal dreams, education, medical needs, or celebrations with ease and security.",
+        href: "/individual",
         image: "/home/your-cause1.jpg",
         iconBackground: "bg-light-purple",
         textColor: "text-dark-purple",
+        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
         Icon: FaPersonBreastfeeding
     },
     {
         title: "Communities",
-        href: "/communities",
+        description: "Support local projects, build infrastructure, or launch social and environmental initiatives.",
+        href: "/community",
         image: "/home/emergency1.jpg",
         iconBackground: "bg-light-orange",
         textColor: "text-dark-orange",
+        hoverColor: "hover:text-yellow-600 hover:border-yellow-600/40",
         Icon: TbMedicalCross
     },
     {
         title: "Organizations",
-        href: "/organizations",
+        description: "Empower NGOs, charities, foundations, and social enterprises to achieve their vital missions.",
+        href: "/organization",
         image: "/home/emergency2.jpg",
         iconBackground: "bg-light-green",
         textColor: "text-green-600",
+        hoverColor: "hover:text-purple-600 hover:border-purple-600/40",
         Icon: GiHealthCapsule
     },
     {
         title: "Charity cases",
-        href: "/charity-cases",
+        description: "Provide urgent aid for medical treatments, emergencies, disaster recovery, and humanitarian needs.",
+        href: "/charity",
         image: "/home/business2.jpg",
         iconBackground: "bg-blue-100",
         textColor: "text-blue-900",
+        hoverColor: "hover:text-main hover:border-main/40",
         Icon: BiSolidBriefcase
     },
     {
         title: "NGOs",
+        description: "Support Non-Governmental Organizations in their critical work on community development, aid, and environmental causes.",
         href: "/ngos",
         image: "/home/education1.jpg",
         iconBackground: "bg-yellow-100",
         textColor: "text-yellow-600",
+        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
         Icon: IoIosSchool
     },
     {
         title: "Startups",
-        href: "/startups-seeking-investors",
+        description: "Provide urgent aid for medical treatments, emergencies, disaster recovery, and humanitarian needs.",
+        href: "/startups",
         image: "/home/agrculture3.jpg",
         iconBackground: "bg-green-100",
         textColor: "text-green-600",
+        hoverColor: "hover:text-main hover:border-main/40",
         Icon: MdPets
     },
 ];
@@ -248,120 +260,9 @@ export const TIPS = [
     },
 ];
 
-export const CATEGORIES_3 = [
-    {
-        title: "Medical",
-        href: "/medical",
-        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
-        Icon: GiHealthCapsule
-    },
-    {
-        title: "Memorial",
-        href: "/memorial",
-        hoverColor: "hover:text-yellow-600 hover:border-yellow-600/40",
-        Icon: FaMonument
-    },
-    {
-        title: "Emergency",
-        href: "/emergency",
-        hoverColor: "hover:text-purple-600 hover:border-purple-600/40",
-        Icon: TbMedicalCross
-    },
-    {
-        title: "Nonprofit",
-        href: "/nonprofit",
-        hoverColor: "hover:text-main hover:border-main/40",
-        Icon: GiReceiveMoney
-    },
-    {
-        title: "Education",
-        href: "/education",
-        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
-        Icon: MdSchool
-    },
-    {
-        title: "Animal",
-        href: "/animal",
-        hoverColor: "hover:text-main hover:border-main/40",
-        Icon: MdPets
-    },
-    {
-        title: "Environment",
-        href: "/environment",
-        hoverColor: "hover:text-orange-600 hover:border-orange-600/40",
-        Icon: FaLandmarkDome
-    },
-    {
-        title: "Business",
-        href: "/business",
-        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
-        Icon: FaBriefcase
-    },
-    {
-        title: "Community",
-        href: "/community",
-        hoverColor: "hover:text-purple-600 hover:border-purple-600/40",
-        Icon: FaPeopleGroup
-    },
-    {
-        title: "Competition",
-        href: "/competition",
-        hoverColor: "hover:text-teal-600 hover:border-teal-600/40",
-        Icon: FaTrophy,
-    },
-    {
-        title: "Creative",
-        href: "/creative",
-        hoverColor: "hover:text-yellow-600 hover:border-yellow-600/40",
-        Icon: FaLightbulb
-    },
-    {
-        title: "Event",
-        href: "/event",
-        hoverColor: "hover:text-red-600 hover:border-red-600/40",
-        Icon: BsCalendar2EventFill
-    },
-    {
-        title: "Faith",
-        href: "/faith",
-        hoverColor: "hover:text-blue-600 hover:border-blue-600/40",
-        Icon: GiPrayer
-    },
-    {
-        title: "Family",
-        href: "/family",
-        hoverColor: "hover:text-purple-600 hover:border-purple-600/40",
-        Icon: MdFamilyRestroom
-    },
-    {
-        title: "Sports",
-        href: "/sports",
-        hoverColor: "hover:text-orange-600 hover:border-orange-600/40",
-        Icon: GiSoccerBall
-    },
-    {
-        title: "Travel",
-        href: "/travel",
-        hoverColor: "hover:text-teal-600 hover:border-teal-600/40",
-        Icon: TbSailboat
-    },
-    {
-        title: "Volunteer",
-        href: "/volunteer",
-        hoverColor: "hover:text-yellow-600 hover:border-yellow-600/40",
-        Icon: MdVolunteerActivism
-    },
-    {
-        title: "Wishes",
-        href: "/wishes",
-        hoverColor: "hover:text-main hover:border-main/40",
-        Icon: TbPlant2
-    }
-];
-
 export const CATEGORY_FUNDRAISERS = [
     {
-        categoryTitle: "Medical Fundraisers",
+        categoryTitle: "Individual Fundraisers",
         fundraisers: [
             {
                 location: "Conyers, GA",
@@ -387,7 +288,7 @@ export const CATEGORY_FUNDRAISERS = [
         ],
     },
     {
-        categoryTitle: "Memorial Fundraisers",
+        categoryTitle: "Community Fundraisers",
         fundraisers: [
             {
                 location: "Clinton, NY",
@@ -414,7 +315,7 @@ export const CATEGORY_FUNDRAISERS = [
         ],
     },
     {
-        categoryTitle: "Emergency Fundraisers",
+        categoryTitle: "Organization Fundraisers",
         fundraisers: [
             {
                 location: "Clinton Township, MI",
@@ -440,7 +341,7 @@ export const CATEGORY_FUNDRAISERS = [
         ]
     },
     {
-        categoryTitle: "Nonprofit Fundraisers",
+        categoryTitle: "Charity Fundraisers",
         fundraisers: [
             {
                 location: "Maryville, TN",
@@ -466,7 +367,7 @@ export const CATEGORY_FUNDRAISERS = [
         ]
     },
     {
-        categoryTitle: "Education Fundraisers",
+        categoryTitle: "NGO Fundraisers",
         fundraisers: [
             {
                 location: "Fort Collins, CO",

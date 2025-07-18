@@ -5,13 +5,14 @@ import { PiPlantFill } from "react-icons/pi";
 import { TbArrowUpRight } from "react-icons/tb";
 
 import { LINKS_2 } from "../../_assets/data/footer";
+import Image from "next/image";
 
 
 export default function Footer() {
 
     return (
         <footer className="px-10 bg-black text-white/60">
-            <div className="mx-auto pt-20 pb-16 w-full max-w-lg flex flex-col gap-12">
+            <div className="mx-auto pt-20 pb-16 min-h-screen max-w-lg flex flex-col justify-between gap-12">
                 <div className="grid gap-10 grid-cols-2">
                     <div className="flex flex-col gap-6">
                         <h3 className="text-2xl tracking-tighter max-w-[24ch]">
@@ -57,11 +58,9 @@ export default function Footer() {
                 </div>
                 <div className="grid grid-cols-2 gap-10">
                     <div className="">
-                        <Link href="/" className="flex gap-2 items-center justify-center w-fit">
-                            <span className="w-20 aspect-square rounded-full flex items-center justify-center bg-white/60 text-black">
-                                <PiPlantFill size={48} />
-                            </span>
-                            <span className="font-bold tracking-tighter text-8xl">f.dreamz</span>
+                        <Link href="/" className="flex gap-2 items-center justify-center w-fit grayscale">
+                            <Image src="/favicon.svg" width={200} height={200} alt="Fund dreams logo" className="w-16 aspect-square block object-cover border-2 border-white/60 rounded-full" />
+                            <Image src="/logo-cover.png" alt="Logo cover" width={160} height={64} className="h-20 w-auto object-cover" />
                         </Link>
                     </div>
                     <div className="flex flex-col justify-end mb-2">

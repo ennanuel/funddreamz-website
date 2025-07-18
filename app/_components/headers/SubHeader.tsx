@@ -29,8 +29,8 @@ export default function SubHeader({ subLinks, href, article, isGrid, index, open
                     article ?
                         <div className="flex-1 pt-20 pb-10 flex">
                             <article className="w-full flex flex-col justify-start">
-                                <div className="relative flex-1 max-h-[320px] mb-6">
-                                    <Image src={article.image} alt={article.title} fill className="block object-cover" />
+                                <div className="relative mb-6 w-full aspect-video">
+                                    <Image src={article.image} alt={article.title} fill className="block object-cover rounded-2xl" />
                                 </div>
                                 {
                                     article.date ?
@@ -65,10 +65,10 @@ function NavLink({ title, href, isExternalLink }: SubHeaderType) {
 };
 function NavLinkAlt({ title, Icon, description, href }: SubHeaderType) {
     return (
-        <Link href={href} className="flex gap-4 p-2 py-4 rounded-xl hover:bg-green-100">
+        <Link href={href} className="flex gap-4 py-8 px-6 rounded-xl hover:bg-light-purple">
             <span className="flex items-center justify-center h-8 w-8">
                 {
-                    Icon ? <Icon size={28} className="text-green-600" /> : null
+                    Icon ? <Icon size={28} className="text-purple-600" /> : null
                 }
             </span>
             <div className="flex flex-col">

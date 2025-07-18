@@ -1,11 +1,12 @@
 import { Link as LinkType } from "@/app/_types";
-import { BiPlusMedical } from "react-icons/bi";
-import { FaCircleInfo, FaPeopleGroup } from "react-icons/fa6";
+import { BiSolidLogIn } from "react-icons/bi";
+import { FaCircleInfo } from "react-icons/fa6";
 
-import { MdLocalActivity, MdTipsAndUpdates, MdVolunteerActivism, MdWorkspacesFilled } from "react-icons/md";
-import { PiPlantFill, PiTipJarFill } from "react-icons/pi";
-import { RiArticleFill } from "react-icons/ri";
+import { MdLocalActivity, MdVolunteerActivism } from "react-icons/md";
+import { PiPlantFill } from "react-icons/pi";
 import { TbCategoryFilled } from "react-icons/tb";
+import { CREATE_FUNDRAISER_LINK, SIGN_UP_LINK } from "./links";
+import { BsPersonFillAdd } from "react-icons/bs";
 
 
 export const LINKS: LinkType[] = [
@@ -14,7 +15,7 @@ export const LINKS: LinkType[] = [
         href: "/donate",
         article: {
             title: "Discover fundraisers to support",
-            image: "/home/article2.jpg",
+            image: "/home/article1.jpg",
             cta: "Learn more",
         },
         subLinks: [
@@ -36,12 +37,6 @@ export const LINKS: LinkType[] = [
                 description: "Donate to verified relief",
                 Icon: MdVolunteerActivism
             },
-            {
-                title: "Supporter space",
-                href: "/categories",
-                description: "Inspiration, FAQs and where to give",
-                Icon: MdWorkspacesFilled
-            },
         ]
     },
     {
@@ -50,8 +45,8 @@ export const LINKS: LinkType[] = [
         isGrid: true,
         subLinks: [
             {
-                title: "Getting started",
-                href: "/how-to-get-started",
+                title: "Start your fundraiser",
+                href: CREATE_FUNDRAISER_LINK,
                 description: "Step-by-step help, examples, and more",
                 Icon: PiPlantFill
             },
@@ -68,34 +63,16 @@ export const LINKS: LinkType[] = [
                 Icon: TbCategoryFilled
             },
             {
-                title: "Fundraising ideas",
-                href: "/fundraising-ideas",
-                description: "Ideas to spark your creativity",
-                Icon: MdTipsAndUpdates
+                title: "Sign up",
+                href: SIGN_UP_LINK,
+                description: "Create a FundDreamz account",
+                Icon: BsPersonFillAdd
             },
             {
-                title: "Team fundraising",
-                href: "/team-fundraising",
-                description: "Fundraise together with a team",
-                Icon: FaPeopleGroup
-            },
-            {
-                title: "Charity fundraising",
-                href: "/charity-fundraising",
-                description: "Fundraise for a charity",
-                Icon: PiTipJarFill
-            },
-            {
-                title: "Fundraising blog",
-                href: "/blog",
-                description: "Resources, tips and more",
-                Icon: RiArticleFill
-            },
-            {
-                title: "Sign up as a nonprofit",
+                title: "Sign in",
                 href: "/nonprofit",
-                description: "Claim your nonprofit",
-                Icon: BiPlusMedical
+                description: "Log in to your account",
+                Icon: BiSolidLogIn
             },
         ]
     },
@@ -111,26 +88,18 @@ export const LINKS: LinkType[] = [
         subLinks: [
             {
                 title: "Support",
-                href: "",
-                isExternalLink: true
-            },
-            {
-                title: "Help center",
-                href: "",
+                href: "/support",
                 isExternalLink: true
             },
             {
                 title: "Pricing",
-                href: ""
+                href: "/pricing"
             },
             {
                 title: "For developers",
                 href: "",
+                isInactive: true,
                 isExternalLink: true
-            },
-            {
-                title: "News",
-                href: ""
             },
             {
                 title: "Contact us",

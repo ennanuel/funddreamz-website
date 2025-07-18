@@ -13,13 +13,12 @@ import { CATEGORIES_2 } from "../../_assets/data";
 export default function Categories() {
 
     return (
-        <div className="bg-gray-50 px-10">
-            <section className="mx-auto max-w-lg w-full min-h-screen pt-24 pb-20 flex flex-col gap-20">
+        <div className="bg-white px-10">
+            <section className="mx-auto max-w-lg w-full min-h-screen pt-24 pb-20 flex flex-col">
                 <div className="flex flex-col gap-4">
                     <h2 className="font-bold text-6xl tracking-tighter"><span className="text-gray-800">Fundraise for anyone</span></h2>
-                    <p><span className="font-semibold text-3xl tracking-tighter text-gray-500">Pick a category that best fits you fundraising goal.</span></p>
                 </div>
-                <ul className="flex-1 grid grid-cols-3 gap-6">
+                <ul className="flex-1 mt-20 grid grid-cols-3 gap-4">
                     {
                         CATEGORIES_2.map((category) => (
                             <li key={category.title} className="flex">
@@ -27,7 +26,10 @@ export default function Categories() {
                             </li>
                         ))
                     }
-                </ul>
+                </ul>                    
+                <p className="mt-10 text-lg font-semibold tracking-tighter">
+                    <span className="text-gray-500">Pick a category that best fits you fundraising goal.</span>
+                </p>
             </section>
         </div>
     )
@@ -62,7 +64,7 @@ function Category({ title, description, iconBackground, background, Icon }: Cate
     }
 
     return (
-        <Link href="/home" className="flex-1 group">
+        <Link href="/home" className="relative flex-1 group hover:z-1">
             <motion.div 
                 ref={boxRef} 
                 className="w-full h-full"

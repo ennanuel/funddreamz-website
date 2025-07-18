@@ -1,0 +1,974 @@
+[
+    {
+        "categoryId": "individual",
+        "categoryTitle": "Start an Individual Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for individuals looking to achieve their personal dreams.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/individual-elizeu-dias-2EGNqazbAMk-unsplash.jpg",
+            "/category-images/individual-tani-olorunyomi-xj1O1GWR3Z8-unsplash.jpg",
+            "/category-images/individual-vinicius-amnx-amano-vr2zg_8bvaw-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach donors",
+            "description": "Once live, share your fundraiser link with friends and family to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/fund.dre.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your bank information to securely start receiving funds or invite your intended recipient to add theirs. You don’t need to reach your fundraising goal to receive your money.",
+            "exampleFunds": "₦2,305",
+            "examplePayment": "Payment made by anonymous..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your Individual Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Craft a compelling story",
+                "content": "Clearly articulate your personal vision, challenges, and how the funds will be used. Engage your audience with photos or even a video of you explaining your story and asking for support. If possible, include estimated funds or where funds will be going. For example, if you need help raising funds for a dream trip or medical equipment."
+            },
+            {
+                "heading": "Ask for people to help spread the word",
+                "content": "When asking for support, ensure donors know their contribution is greatly appreciated and if they can share your fundraiser link with their own network. It would help you even further."
+            },
+            {
+                "heading": "Share your fundraiser regularly",
+                "content": "Besides reaching out using social media, text, and email. Try printing out a QR code that links to your fundraiser and put flyers around your community where potential supporters can find and easily donate."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of Individual Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Dream Travel Adventure",
+                "title": "Sarah's European Backpacking Dream",
+                "description": "Sarah has always dreamed of backpacking across Europe, experiencing diverse cultures and breathtaking landscapes. Her friends have launched a FundDreamz campaign to help her cover the remaining costs for flights and accommodation, ensuring she can embark on this once-in-a-lifetime adventure...",
+                "href": "#",
+                "raisedAmount": "₦2,800.00",
+                "goalAmount": "₦3,000.00"
+            },
+            {
+                "category": "Funding College Tuition",
+                "title": "Mark's College Journey",
+                "description": "Mark, a driven first-generation student, is pursuing a degree in computer science. His family and friends have started a FundDreamz campaign to help him manage tuition fees and purchase essential textbooks, ensuring he can focus on his studies without financial burden...",
+                "href": "#",
+                "raisedAmount": "₦12,500.00",
+                "goalAmount": "₦15,000.00"
+            },
+            {
+                "category": "Medical Support",
+                "title": "Help for Emily's Recovery",
+                "description": "Emily is recovering from a critical surgery and requires ongoing physiotherapy and specialized medical equipment. Her community has rallied on FundDreamz to help cover these essential costs, allowing Emily to focus fully on her path to recovery and regain her independence...",
+                "href": "#",
+                "raisedAmount": "₦18,900.00",
+                "goalAmount": "₦20,000.00"
+            },
+            {
+                "category": "Creative Project Funding",
+                "title": "The \"Urban Echoes\" Photography Project",
+                "description": "Artist Alex is embarking on \"Urban Echoes,\" a photography series capturing the hidden beauty of city life. This FundDreamz campaign aims to secure funds for high-quality printing, exhibition space, and framing, bringing Alex's vision to a wider audience...",
+                "href": "#",
+                "raisedAmount": "₦4,200.00",
+                "goalAmount": "₦5,000.00"
+            },
+            {
+                "category": "Birthday Wishlist",
+                "title": "Michael's 30th Birthday Tech Upgrade",
+                "description": "For his 30th birthday, Michael is hoping to upgrade his home office. Friends and family are contributing to his FundDreamz Wishlist for a new monitor, ergonomic chair, and noise-canceling headphones, ensuring his special day also boosts his productivity...",
+                "href": "#",
+                "raisedAmount": "₦750.00",
+                "goalAmount": "₦1,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for Individual Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Top Fundraising Tips",
+                "link": "#"
+            },
+            {
+                "text": "How to Fund Your Personal Goals",
+                "link": "#"
+            },
+            {
+                "text": "20 Fundraiser Sharing Tips to Increase Donations",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about Individual Fundraising on FundDreamz",
+            "faqs": [
+                {
+                    "question": "Does my individual fundraiser need to reach its goal in order to receive the money I’ve raised?",
+                    "answer": "No, you can securely set up your bank transfer and start receiving your money within days. You can also adjust your fundraising goal throughout the process."
+                },
+                {
+                    "question": "What details should I include in my individual fundraiser on FundDreamz?",
+                    "answer": "You should include a compelling story about your personal vision, the challenges you face, and how the funds will be used. Adding photos or a video can help engage your audience. Be transparent about your estimated funding needs and where the money will go."
+                },
+                {
+                    "question": "How do I invite team members to help me?",
+                    "answer": "Your FundDreamz dashboard provides options to invite friends or family to join your fundraiser as team members. They can help share your link, manage updates, and reach a wider audience."
+                },
+                {
+                    "question": "How long will it take to receive the money?",
+                    "answer": "Once you set up your bank transfer, you can typically expect to receive the funds within 3-5 business days."
+                },
+                {
+                    "question": "Can I upload videos to my fundraiser?",
+                    "answer": "Yes, FundDreamz allows you to upload videos to your fundraiser page. This is a great way to tell your story, explain your goals, and personally connect with potential donors."
+                },
+                {
+                    "question": "How much of the money will I keep?",
+                    "answer": "FundDreamz has no platform fees, meaning you keep more of the money you raise. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) will apply, which are deducted by our payment processor."
+                },
+                {
+                    "question": "What countries are supported to fundraise for on FundDreamz?",
+                    "answer": "FundDreamz supports fundraising in Nigeria for now. Please refer to our support page or contact our customer service for the most up-to-date list of supported regions."
+                }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start an Individual Fundraiser on FundDreamz?",
+            "description": "Launching an individual fundraiser on FundDreamz provides a straightforward and effective path to turning your personal dreams into reality. As a leading community-powered fundraising platform, FundDreamz empowers individuals to connect directly with a supportive network of donors eager to help with life's big moments, unexpected challenges, or exciting projects. Whether you are funding a dream trip, covering medical bills, pursuing an education, or celebrating a special occasion with a wishlist, FundDreamz offers easy-to-use tools for your personal needs."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    },
+    {
+        "categoryId": "community",
+        "categoryTitle": "Start a Community Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for community leaders and organizations looking to make a collective impact.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/community-iwaria-inc-K8g07Oaguqw-unsplash.jpg",
+            "/category-images/community-nana-adwuma-kbHIVPAdceg-unsplash.jpg",
+            "/category-images/community-annie-spratt-0cgpyigyIkM-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your community fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach donors",
+            "description": "Once live, share your fundraiser link with friends, family, and community members to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/community.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your organization's bank information to securely start receiving funds or invite your intended recipient to add theirs. You don’t need to reach your fundraising goal to receive your money.",
+            "exampleFunds": "₦5,780",
+            "examplePayment": "Payment made by community member..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your Community Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Craft a compelling story for your cause",
+                "content": "Clearly articulate your community's vision, the challenges you aim to address, and how the funds will directly benefit the community. Engage your audience with photos or even a video showcasing the impact of your work. Include specific details on how funds will be used, e.g., 'raising ₦10,000 for a new community library roof'."
+            },
+            {
+                "heading": "Mobilize community champions",
+                "content": "When asking for support, encourage community members to not only donate but also to share your fundraiser link within their own networks. Empower volunteers to become advocates for your cause."
+            },
+            {
+                "heading": "Share your fundraiser broadly and consistently",
+                "content": "Beyond social media, text, and email, consider organizing local events, putting up flyers with QR codes in community centers, or collaborating with local businesses to spread awareness about your fundraiser."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of Community Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Community Support",
+                "title": "Supporting the Sunnybrook Senior Center",
+                "description": "The Sunnybrook Senior Center provides vital services for our elderly residents. This FundDreamz campaign aims to raise funds for new recreational equipment and expand their daily meal program, ensuring our seniors continue to thrive with dignity...",
+                "href": "#",
+                "raisedAmount": "₦7,120.00",
+                "goalAmount": "₦7,500.00"
+            },
+            {
+                "category": "Infrastructure Development",
+                "title": "Building the Future: Northside Community Library",
+                "description": "Our community needs a place for learning and connection. This FundDreamz initiative is dedicated to raising funds for the construction of the new Northside Community Library, a hub for education, resources, and shared experiences for all ages...",
+                "href": "#",
+                "raisedAmount": "₦45,200.00",
+                "goalAmount": "₦50,000.00"
+            },
+            {
+                "category": "Social Impact Initiatives",
+                "title": "Nourish Our Neighbors: City Food Bank Drive",
+                "description": "Poverty continues to affect many families in our city. The 'Nourish Our Neighbors' FundDreamz campaign is collecting funds to stock our local food bank, providing essential meals and support to those facing food insecurity...",
+                "href": "#",
+                "raisedAmount": "₦9,850.00",
+                "goalAmount": "₦10,000.00"
+            },
+            {
+                "category": "Environmental Projects",
+                "title": "Greening Our City: Community Tree Planting",
+                "description": "Help us create a healthier, greener urban environment! This FundDreamz project is dedicated to funding our annual community tree-planting initiative, combating deforestation and improving air quality for everyone in our neighborhoods...",
+                "href": "#",
+                "raisedAmount": "₦3,100.00",
+                "goalAmount": "₦3,500.00"
+            },
+            {
+                "category": "Cultural Events and Festivals",
+                "title": "The Annual Riverside Music Festival",
+                "description": "The Riverside Music Festival celebrates our local talent and brings our community together. This FundDreamz campaign seeks support to cover venue costs, artist fees, and promotional materials, ensuring another vibrant and memorable cultural event...",
+                "href": "#",
+                "raisedAmount": "₦15,600.00",
+                "goalAmount": "₦16,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for Community Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Top Fundraising Tips for Groups",
+                "link": "#"
+            },
+            {
+                "text": "How to Organize a Successful Community Fundraiser",
+                "link": "#"
+            },
+            {
+                "text": "Strategies for Engaging Your Local Community",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about Community Fundraising on FundDreamz",
+            "faqs": [
+            {
+                "question": "Does my community fundraiser need to reach its goal in order to receive the money I’ve raised?",
+                "answer": "No, you can securely set up your bank transfer and start receiving your money within 3-5 days. You can also adjust your fundraising goal throughout the process."
+            },
+            {
+                "question": "What details should I include in my community fundraiser on FundDreamz?",
+                "answer": "You should include a clear narrative of your community's needs or project goals, how the funds will be used, and the positive impact on the community. Photos, videos, and testimonials from community members can greatly enhance your appeal."
+            },
+            {
+                "question": "How do I invite team members to help me manage the fundraiser?",
+                "answer": "Your FundDreamz dashboard provides options to invite multiple team members from your organization or community group to help manage the fundraiser, share updates, and spread the word effectively."
+            },
+            {
+                "question": "How long will it take for our community organization to receive the money?",
+                "answer": "Once your bank transfer details are set up and verified, funds are typically transferred to your organization's bank account within 3-5 business days."
+            },
+            {
+                "question": "Can we upload videos to our community fundraiser?",
+                "answer": "Yes, you can upload videos to your fundraiser page. Videos are highly effective for showcasing your project, interviewing beneficiaries, or sharing testimonials, which can significantly increase donor engagement."
+            },
+            {
+                "question": "How much of the money will our community keep?",
+                "answer": "FundDreamz has no platform fees for community fundraisers, meaning your community keeps more of the money you raise. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) will apply, which are deducted by our payment processor."
+            },
+            {
+                "question": "What documentation is needed for a community fundraiser?",
+                "answer": "Depending on the country and the nature of your organization, you may be asked to provide documentation such as proof of non-profit status, organizational registration, or details of the individuals managing the fund transfer. This ensures transparency and compliance."
+            }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start a Community Fundraiser on FundDreamz?",
+            "description": "Launching a community fundraiser on FundDreamz provides a straightforward and impactful path to uniting your community and achieving collective goals. As a leading community-powered fundraising platform, FundDreamz empowers local groups, non-profits, and grassroots initiatives to connect directly with a supportive network of donors eager to contribute to positive change. Whether you are improving local infrastructure, supporting social impact programs, or celebrating cultural heritage, FundDreamz offers easy-to-use tools to serve your community's needs."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    },
+    {
+        "categoryId": "organization",
+        "categoryTitle": "Start an Organization Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for NGOs, charities, foundations, and social enterprises to achieve their mission.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/organization-adedotun-adegborioye-qPEuCalAC6Y-unsplash.jpg",
+            "/category-images/organization-michael-ali-YcWywyu4L68-unsplash.jpg",
+            "/category-images/organization-pablo-hernandez-ut7gsZ3gcu4-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your organization's fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach donors",
+            "description": "Once live, share your fundraiser link with your supporters, community, and network to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/organization.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your organization's bank information to securely start receiving funds. You don’t need to reach your fundraising goal to receive your money, and all transfers are protected.",
+            "exampleFunds": "₦10,500",
+            "examplePayment": "Payment made by dedicated donor..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your Organization Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Craft a clear and impactful narrative",
+                "content": "Clearly articulate your organization's mission, the specific problem you are solving, and how the funds will directly contribute to achieving your goals. Use compelling stories, photos, and videos to demonstrate the real-world impact of your work."
+            },
+            {
+                "heading": "Leverage your network and partnerships",
+                "content": "Encourage your board members, staff, volunteers, and existing partners to share your fundraiser widely. Collaborate with aligned organizations or businesses to expand your reach and amplify your message."
+            },
+            {
+                "heading": "Provide transparent updates and show progress",
+                "content": "Regularly update your donors on your fundraising progress and how their contributions are being used. Share milestones, photos of projects in action, and testimonials from beneficiaries to build trust and encourage continued support."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of Organization Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Non-Governmental Organizations (NGOs)",
+                "title": "Clean Water Initiative for Rural Villages",
+                "description": "Our NGO is dedicated to providing access to clean, safe drinking water in underserved rural communities. This FundDreamz campaign aims to fund the drilling of new wells and installation of purification systems, transforming health and livelihoods...",
+                "href": "#",
+                "raisedAmount": "₦28,750.00",
+                "goalAmount": "₦30,000.00"
+            },
+            {
+                "category": "Charitable Organizations",
+                "title": "Support for the Evergreen Orphanage",
+                "description": "The Evergreen Orphanage provides a loving home and essential care for vulnerable children. This FundDreamz campaign seeks to secure funds for daily provisions, educational supplies, and healthcare, ensuring every child has a brighter future...",
+                "href": "#",
+                "raisedAmount": "₦15,200.00",
+                "goalAmount": "₦16,000.00"
+            },
+            {
+                "category": "Foundations: Educational Scholarships",
+                "title": "Bright Futures Scholarship Fund",
+                "description": "Our foundation is committed to breaking down educational barriers. This FundDreamz initiative provides full scholarships to talented students from low-income families, enabling them to pursue higher education and achieve their academic dreams...",
+                "href": "#",
+                "raisedAmount": "₦55,000.00",
+                "goalAmount": "₦60,000.00"
+            },
+            {
+                "category": "Social Enterprises",
+                "title": "Upcycled Fashion for a Greener Planet",
+                "description": "As a social enterprise, we create unique, stylish clothing from recycled materials, reducing waste and promoting sustainable fashion. This FundDreamz campaign supports our expansion to process more recycled textiles, increasing our environmental impact...",
+                "href": "#",
+                "raisedAmount": "₦9,500.00",
+                "goalAmount": "₦10,000.00"
+            },
+            {
+                "category": "Mission-Driven Businesses",
+                "title": "Solar Power for Off-Grid Communities Project",
+                "description": "Our mission-driven business provides affordable solar energy solutions to remote communities without access to electricity. This FundDreamz fundraiser will help us subsidize installations for more families, bringing light and opportunity where it's needed most...",
+                "href": "#",
+                "raisedAmount": "₦22,100.00",
+                "goalAmount": "₦25,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for Organization Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Guide to Non-Profit Fundraising",
+                "link": "#"
+            },
+            {
+                "text": "Best Practices for Engaging Corporate Donors",
+                "link": "#"
+            },
+            {
+                "text": "Maximizing Your Organizational Impact with Fundraising",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about Organization Fundraising on FundDreamz",
+            "faqs": [
+            {
+                "question": "Does my organization's fundraiser need to reach its goal in order to receive the money we’ve raised?",
+                "answer": "No, your organization can securely set up its bank transfer and start receiving funds within 3-5 days. Your fundraising goal can also be adjusted throughout the campaign, allowing flexibility."
+            },
+            {
+                "question": "What details should we include in our organization's fundraiser on FundDreamz?",
+                "answer": "Include a clear description of your organization's mission, the specific project or cause you're fundraising for, a detailed breakdown of how funds will be used, and the expected impact. High-quality photos, videos, and testimonials are crucial for engaging potential donors."
+            },
+            {
+                "question": "How do we invite multiple team members to help manage the fundraiser?",
+                "answer": "Your FundDreamz dashboard offers robust tools to add and manage multiple team members from your organization. This allows different staff or volunteers to contribute to updates, share the fundraiser, and monitor progress efficiently."
+            },
+            {
+                "question": "How long will it take for our organization to receive the money?",
+                "answer": "Once your organization's bank account details are verified and linked, transfers are typically processed and received within 3-5 business days."
+            },
+            {
+                "question": "Can we upload videos and official documents to our organization's fundraiser?",
+                "answer": "Yes, FundDreamz supports uploading both videos to tell your story dynamically and relevant official documents (like registration certificates or project proposals) to enhance your organization's credibility and transparency."
+            },
+            {
+                "question": "How much of the money will our organization keep?",
+                "answer": "FundDreamz does not charge platform fees for organizational fundraisers, so your organization retains more of the funds raised. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) are applied by our payment processor."
+            },
+            {
+                "question": "What documentation is required to verify our organization?",
+                "answer": "To ensure legitimacy and compliance, we require documentation such as official registration certificates (e.g., non-profit status, charity registration), tax IDs, and bank account verification for the organization. Specific requirements may vary by country."
+            }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start an Organization Fundraiser on FundDreamz?",
+            "description": "Launching an organizational fundraiser on FundDreamz offers a powerful and efficient way to garner support for your mission. As a trusted community-powered fundraising platform, FundDreamz empowers NGOs, charities, foundations, and social enterprises to connect directly with a broad network of donors. Whether you're funding clean water projects, supporting orphanages, providing scholarships, or advancing social impact, FundDreamz provides user-friendly tools and secure processing to help your organization achieve its vital goals."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    },
+    {
+        "categoryId": "charity",
+        "categoryTitle": "Start a Charity Case Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for individuals and groups supporting urgent charity cases.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/charity-michael-ali-wGfht4pLnng-unsplash.jpg",
+            "/category-images/charity-michael-ali-mH0enTAR_HI-unsplash.jpg",
+            "/category-images/charity-fatima-yusuf-aWEntYWg3rY-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your charity case fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach donors",
+            "description": "Once live, share your fundraiser link with friends, family, and compassionate individuals to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/charity.case.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your bank information or the intended recipient's bank information to securely start receiving funds. You don’t need to reach your fundraising goal to receive your money, ensuring quick access during critical times.",
+            "exampleFunds": "₦4,150",
+            "examplePayment": "Payment made by compassionate donor..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your Charity Case Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Tell a clear and urgent story",
+                "content": "Clearly articulate the emergency or need, focusing on the individual(s) or community affected. Use empathetic language and, if appropriate, share photos or videos that convey the urgency and human element of the situation. Be precise about how the funds will directly alleviate the crisis."
+            },
+            {
+                "heading": "Provide proof and updates for transparency",
+                "content": "To build trust, consider including relevant documentation (e.g., medical reports, police reports for emergencies, or news articles for disasters). Continuously update donors on the progress of the case, demonstrating how their contributions are making a difference and showing accountability."
+            },
+            {
+                "heading": "Reach out to diverse networks",
+                "content": "Beyond immediate friends and family, share your fundraiser with local community groups, relevant support organizations, and even local media. The more widely you share, the greater the chance of reaching individuals ready to help during a time of need."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of Charity Case Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Medical Treatments",
+                "title": "Supporting Mia's Life-Saving Treatment",
+                "description": "Mia is bravely battling a rare condition and requires immediate, expensive treatment. This FundDreamz campaign is dedicated to raising the crucial funds needed for her specialized medical care and medications, offering her a chance for a full recovery...",
+                "href": "#",
+                "raisedAmount": "₦35,800.00",
+                "goalAmount": "₦40,000.00"
+            },
+            {
+                "category": "Emergency Relief",
+                "title": "Rebuilding Homes After the Valley Wildfire",
+                "description": "The recent wildfires devastated many homes in Valley Oaks, leaving families displaced. This FundDreamz initiative provides emergency funds to help affected families secure temporary housing, food, and begin the long process of rebuilding their lives...",
+                "href": "#",
+                "raisedAmount": "₦12,300.00",
+                "goalAmount": "₦15,000.00"
+            },
+            {
+                "category": "Disaster Recovery",
+                "title": "Flood Relief for Riverbend Community",
+                "description": "The severe floods have left the Riverbend community in dire need of support. This FundDreamz campaign is focused on providing immediate assistance like clean water, food, and temporary shelter, and supporting long-term recovery efforts for residents...",
+                "href": "#",
+                "raisedAmount": "₦8,900.00",
+                "goalAmount": "₦10,000.00"
+            },
+            {
+                "category": "Humanitarian Aid",
+                "title": "Food and Medical Aid for Displaced Families",
+                "description": "Conflict has forced countless families from their homes, leaving them vulnerable. This FundDreamz humanitarian aid effort aims to provide essential food supplies, medical care, and safe passage for displaced families seeking refuge and stability...",
+                "href": "#",
+                "raisedAmount": "₦25,500.00",
+                "goalAmount": "₦28,000.00"
+            },
+            {
+                "category": "Community Support Programs",
+                "title": "Bringing Clean Water to Hope Village",
+                "description": "Hope Village has long struggled with access to clean water. This FundDreamz initiative supports a program to install new water purification systems and build community wells, significantly improving health and quality of life for all residents...",
+                "href": "#",
+                "raisedAmount": "₦6,700.00",
+                "goalAmount": "₦7,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for Charity Case Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Guide to Emergency Fundraising",
+                "link": "#"
+            },
+            {
+                "text": "How to Build Trust for Urgent Causes",
+                "link": "#"
+            },
+            {
+                "text": "Effective Communication for Crisis Support",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about Charity Case Fundraising on FundDreamz",
+            "faqs": [
+            {
+                "question": "Does a charity case fundraiser need to reach its goal in order to receive the money I’ve raised?",
+                "answer": "No, you can securely set up your bank transfer and start receiving money within 3-5 days, regardless of whether your goal is met. This ensures funds are accessible quickly for urgent needs."
+            },
+            {
+                "question": "What details should I include in my charity case fundraiser on FundDreamz?",
+                "answer": "Provide a clear, empathetic, and urgent narrative of the situation, explaining who is affected and how the funds will directly help. Including relevant evidence like medical reports (with privacy respected), photos of damages, or official statements (for disasters) can build trust. Always be transparent about the use of funds."
+            },
+            {
+                "question": "How can I ensure the funds go directly to the person/cause in need?",
+                "answer": "FundDreamz prioritizes secure transfers. You can either add your own verified bank account and manage the distribution, or, for direct support, you can invite the intended recipient or a trusted representative to add their bank details for direct, secure transfers."
+            },
+            {
+                "question": "How long will it take for the funds to be received for an urgent charity case?",
+                "answer": "Once bank details are verified, funds are typically transferred and received within 3-5 business days. We aim to process these as swiftly as possible given the urgent nature of charity cases."
+            },
+            {
+                "question": "Can I update donors on the progress of the charity case?",
+                "answer": "Yes, regular updates are highly encouraged and crucial for charity cases. You can post updates with text, photos, and videos, showing donors the impact of their contributions and the progress being made in the situation."
+            },
+            {
+                "question": "How much of the money raised will go to the charity case?",
+                "answer": "FundDreamz charges no platform fees for charity case fundraisers, ensuring that more of the money you raise goes directly to the cause. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) will be deducted by our payment processor."
+            },
+            {
+                "question": "What kind of verification might be needed for charity cases?",
+                "answer": "To maintain trust and prevent misuse, FundDreamz may request supporting documentation relevant to the specific case, such as medical reports (redacted for privacy), police/fire reports, official statements from affected communities, or verification from partner relief organizations."
+            }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start a Charity Case Fundraiser on FundDreamz?",
+            "description": "Launching a charity case fundraiser on FundDreamz provides a compassionate and efficient platform to respond to urgent needs and crises. As a trusted community-powered fundraising platform, FundDreamz empowers individuals and groups to quickly rally support for medical emergencies, disaster relief, humanitarian aid, and critical community support programs. With user-friendly tools and secure fund transfers, FundDreamz helps you make a tangible difference when it matters most, ensuring help reaches those in desperate situations swiftly and securely."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    },
+    {
+        "categoryId":"ngos",
+        "categoryTitle": "Start an NGO Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for Non-Governmental Organizations (NGOs) to achieve their impactful missions.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/ngo-pharaoh-fontain-ecTBOxYwgfs-unsplash.jpg",
+            "/category-images/ngo-joshua-onadipe-oS0OiNSpxqg-unsplash.jpg",
+            "/category-images/ngo-gidon-agaza-H7Uvql59jD0-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your NGO fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach donors",
+            "description": "Once live, share your fundraiser link with your network, partners, and the global community to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/ngo.fund.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your organization's bank information to securely start receiving funds. FundDreamz ensures transparent and protected transfers, allowing you to access funds as they come in.",
+            "exampleFunds": "₦15,800",
+            "examplePayment": "Payment made by international donor..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your NGO Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Craft a powerful and verifiable story",
+                "content": "Clearly articulate your NGO's mission, the specific problem you are addressing, and how the funds will translate into tangible impact. Provide evidence of your work through compelling narratives, high-quality photos, and videos that showcase your projects and beneficiaries. Be transparent about your budget and goals."
+            },
+            {
+                "heading": "Emphasize transparency and accountability",
+                "content": "Regularly provide detailed updates on your fundraiser's progress and how funds are being utilized. Share reports, photos, and testimonials from the field. Our platform supports professional solutions for verification, including document submission and ongoing progress updates, to build and maintain donor trust."
+            },
+            {
+                "heading": "Engage a broad and committed donor base",
+                "content": "Beyond your existing supporters, leverage social media, email campaigns, and partnerships to reach new audiences. Highlight the unique impact your NGO makes and encourage donors to share your cause within their own networks to amplify your message."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of NGO Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Community Development Projects",
+                "title": "Building a Sustainable School in Rural Africa",
+                "description": "Our NGO is raising funds to construct a new primary school in a remote village, providing access to education and a brighter future for hundreds of children. This project includes classrooms, sanitation facilities, and teacher training...",
+                "href": "#",
+                "raisedAmount": "₦75,000.00",
+                "goalAmount": "₦80,000.00"
+            },
+            {
+                "category": "Humanitarian Aid Programs",
+                "title": "Emergency Food & Shelter for Conflict Refugees",
+                "description": "In response to escalating conflict, our NGO is providing urgent humanitarian aid—food, clean water, and temporary shelter—to displaced families. Funds will ensure immediate relief and sustained support for those fleeing violence...",
+                "href": "#",
+                "raisedAmount": "₦120,000.00",
+                "goalAmount": "₦150,000.00"
+            },
+            {
+                "category": "Environmental Conservation",
+                "title": "Protecting Endangered Species in the Amazon",
+                "description": "Our conservation NGO is campaigning to secure critical habitats and protect endangered species in the Amazon rainforest. Funds will support anti-poaching patrols, community education, and reforestation efforts...",
+                "href": "#",
+                "raisedAmount": "₦48,500.00",
+                "goalAmount": "₦50,000.00"
+            },
+            {
+                "category": "Education Initiatives",
+                "title": "Digital Literacy for Disadvantaged Youth",
+                "description": "This initiative provides underprivileged youth with access to computers, internet, and digital literacy training. Our goal is to bridge the digital divide, equipping them with essential skills for future employment and opportunity...",
+                "href": "#",
+                "raisedAmount": "₦32,000.00",
+                "goalAmount": "₦35,000.00"
+            },
+            {
+                "category": "Health and Wellness Campaigns",
+                "title": "Mobile Clinic for Rural Healthcare Access",
+                "description": "Our NGO operates a mobile health clinic, bringing vital medical services to remote rural areas lacking healthcare infrastructure. Funds will cover medical supplies, fuel, and staff for critical health screenings and treatments...",
+                "href": "#",
+                "raisedAmount": "₦65,000.00",
+                "goalAmount": "₦70,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for NGO Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Comprehensive NGO Fundraising Guide",
+                "link": "#"
+            },
+            {
+                "text": "Strategies for Building Trust and Transparency with Donors",
+                "link": "#"
+            },
+            {
+                "text": "Maximizing Global Reach for Humanitarian Causes",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about NGO Fundraising on FundDreamz",
+            "faqs": [
+            {
+                "question": "Does our NGO's fundraiser need to reach its goal to receive the money raised?",
+                "answer": "No, your NGO can securely set up its bank transfer and begin receiving funds within 3-5 days, even if your fundraising goal has not been fully met. This provides flexibility for ongoing projects."
+            },
+            {
+                "question": "What documentation is required to verify our NGO on FundDreamz?",
+                "answer": "To ensure legitimacy and build donor confidence, NGOs are required to submit government registration certificates, proof of operational status (e.g., tax identification, recent annual reports), and a brief track record of previous initiatives. Specific requirements may vary by region."
+            },
+            {
+                "question": "How does FundDreamz ensure the funds raised are used appropriately by NGOs?",
+                "answer": "FundDreamz employs several professional verification solutions. This includes mandatory regular progress updates (photos, videos, reports) on funded projects, which, if not provided, can pause campaigns. We may also utilize an escrow system for larger projects and partner with pre-approved vendors for certain expenditures, ensuring accountability."
+            },
+            {
+                "question": "How quickly can our NGO access the funds once they are raised?",
+                "answer": "Once your NGO's bank account details are verified and linked, funds are typically processed and transferred to your account within 3-5 business days, allowing for timely deployment for your programs."
+            },
+            {
+                "question": "Can we provide updates on our projects with photos and videos?",
+                "answer": "Absolutely. FundDreamz strongly encourages NGOs to provide regular, engaging updates with photos, videos, and reports from the field. This transparency is key to building donor trust and showing the tangible impact of their contributions."
+            },
+            {
+                "question": "How much of the money raised will our NGO keep?",
+                "answer": "FundDreamz charges no platform fees for NGO fundraisers, meaning your organization retains more of the funds you raise to put towards your mission. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) will be applied by our payment processor."
+            },
+            {
+                "question": "Does FundDreamz conduct background checks on NGOs?",
+                "answer": "Yes, FundDreamz conducts background checks on new organizations and may use government databases and third-party verification services to ensure the credibility and legitimacy of NGOs hosted on our platform, providing peace of mind for donors."
+            }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start an NGO Fundraiser on FundDreamz?",
+            "description": "Launching an NGO fundraiser on FundDreamz provides a secure, transparent, and powerful platform to amplify your impact. As a leading community-powered fundraising solution, FundDreamz empowers Non-Governmental Organizations to connect directly with a global network of compassionate donors eager to support vital causes. Whether you're focused on community development, humanitarian aid, environmental conservation, education initiatives, or health campaigns, FundDreamz offers robust tools, stringent verification processes, and a commitment to transparency, ensuring your organization can achieve its mission with confidence and credibility."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    },
+    {
+        "categoryId": "startups",
+        "categoryTitle": "Start a Startup Fundraiser on FundDreamz",
+        "categoryTagline": "With no fee to start a fundraiser or pressure to reach your goal, fundraising on FundDreamz is a trusted choice for startups seeking capital to innovate, grow, and make their mark.",
+        "callToActionTop": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "images": [
+            "/category-images/startup-micheal-ogungbe-2f0z7Un7NRA-unsplash.jpg",
+            "/category-images/startup-johnny-cardoso-icy1NR9iU3g-unsplash.jpg",
+            "/category-images/startup-david-olubaji-wT-xJyLHcNA-unsplash.jpg"
+        ],
+        "mainSectionTitle": "Everything you need to help your startup fundraiser succeed is here - Start fundraising on FundDreamz today!",
+        "howItWorks": [
+            {
+            "step": "Step 1",
+            "title": "Our tools help create your fundraiser",
+            "description": "Click the ‘Start a Dream’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime."
+            },
+            {
+            "step": "Step 2",
+            "title": "Share your fundraiser link to reach investors",
+            "description": "Once live, share your fundraiser link with angel investors, VCs, incubators, and your network to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your FundDreamz dashboard.",
+            "exampleLink": "funddreamz.com/startup.fund.url..."
+            },
+            {
+            "step": "Step 3",
+            "title": "Securely receive the funds you raise",
+            "description": "Add your startup's bank information to securely start receiving funds. FundDreamz ensures transparent and protected transfers, allowing you to access crucial capital as it comes in.",
+            "exampleFunds": "₦50,000",
+            "examplePayment": "Payment made by angel investor..."
+            }
+        ],
+        "callToActionMiddle": {
+            "text": "Start your Dream",
+            "link": "#"
+        },
+        "tipsSection": {
+            "title": "Tips for your Startup Fundraiser on FundDreamz",
+            "tips": [
+            {
+                "heading": "Craft a compelling and data-driven pitch",
+                "content": "Clearly articulate your startup's vision, problem-solution fit, market opportunity, and competitive advantage. Include key metrics, a strong business plan, and compelling visuals (pitch deck, product demos, founder videos) that showcase your potential for growth and return on investment."
+            },
+            {
+                "heading": "Highlight your team and traction",
+                "content": "Investors invest in people. Introduce your founding team and their expertise. Showcase any early traction, such as user adoption, pilot program success, customer testimonials, or early revenue, to demonstrate market validation and momentum."
+            },
+            {
+                "heading": "Provide transparent updates and milestones",
+                "content": "Regularly update potential and current investors on your progress. Share development milestones, user growth, new partnerships, and financial updates. Our platform supports professional solutions for verification and transparency, ensuring investors feel confident in their contributions."
+            }
+            ],
+            "moreTipsLink": "#"
+        },
+        "examplesSection": {
+            "title": "Examples of Startup Fundraisers on FundDreamz",
+            "examples": [
+            {
+                "category": "Seed Funding Rounds",
+                "title": "Building the Future: AI-Powered Learning Platform",
+                "description": "Our EdTech startup is seeking seed funding to develop our Minimum Viable Product (MVP) – an AI-powered adaptive learning platform. Funds will cover initial engineering hires and user testing to validate our solution...",
+                "href": "#",
+                "raisedAmount": "₦180,000.00",
+                "goalAmount": "₦200,000.00"
+            },
+            {
+                "category": "Pre-Seed Funding Rounds",
+                "title": "Concept Validation for Sustainable Packaging Solution",
+                "description": "We're a budding cleantech startup seeking pre-seed funding to conduct critical market research and build initial prototypes for our innovative, biodegradable packaging. This capital will validate our concept for future investment...",
+                "href": "#",
+                "raisedAmount": "₦45,000.00",
+                "goalAmount": "₦50,000.00"
+            },
+            {
+                "category": "Series A Funding Rounds",
+                "title": "Scaling Up: Global Expansion for SaaS CRM",
+                "description": "Having achieved significant market traction, our SaaS CRM startup is launching a Series A round to fuel global expansion. Funds will enhance product features, scale our sales and marketing teams, and capture new international markets...",
+                "href": "#",
+                "raisedAmount": "₦1,800,000.00",
+                "goalAmount": "₦2,000,000.00"
+            },
+            {
+                "category": "Angel Investor Opportunities",
+                "title": "Angel Investment for Health-Tech Innovation",
+                "description": "We are seeking an angel investor to help develop the proof of concept for our revolutionary health-tech wearable that monitors vital signs non-invasively. Your early investment will accelerate our journey to market...",
+                "href": "#",
+                "raisedAmount": "₦90,000.00",
+                "goalAmount": "₦100,000.00"
+            },
+            {
+                "category": "Venture Capital Funding",
+                "title": "Series B: Revolutionizing Logistics with AI",
+                "description": "Our logistics tech startup, leveraging AI for supply chain optimization, is raising a Series B round from VC firms. This substantial investment will enable us to expand our platform across new industries and accelerate our global footprint...",
+                "href": "#",
+                "raisedAmount": "₦4,000,000.00",
+                "goalAmount": "₦5,000,000.00"
+            }
+            ]
+        },
+        "resourcesSection": {
+            "title": "Resources for Startup Fundraising",
+            "links": [
+            {
+                "text": "FundDreamz's Guide to Startup Funding Rounds",
+                "link": "#"
+            },
+            {
+                "text": "How to Craft a Winning Pitch for Investors",
+                "link": "#"
+            },
+            {
+                "text": "Understanding Equity vs. Debt Funding for Startups",
+                "link": "#"
+            }
+            ],
+            "moreIdeasLink": "#"
+        },
+        "faqSection": {
+            "title": "Questions about Startup Fundraising on FundDreamz",
+            "faqs": [
+            {
+                "question": "Does my startup fundraiser need to reach its goal in order to receive the money I’ve raised?",
+                "answer": "No, your startup can securely set up its bank transfer and start receiving funds within 3-5 days, regardless of whether your stated fundraising goal is fully met. This provides flexibility as your funding needs evolve."
+            },
+            {
+                "question": "What details should I include in my startup fundraiser on FundDreamz?",
+                "answer": "You should include a detailed business plan, a clear articulation of your problem-solution, market analysis, financial projections, team profiles, and any existing traction or milestones achieved. A compelling video pitch and product demos are highly recommended."
+            },
+            {
+                "question": "How does FundDreamz help my startup connect with investors?",
+                "answer": "FundDreamz provides a platform to showcase your startup to a broad audience, including potential angel investors and early-stage VCs. By sharing your unique fundraiser link, you can directly reach interested parties and manage all communications and updates through your dashboard."
+            },
+            {
+                "question": "How long will it take for my startup to receive the raised funds?",
+                "answer": "Once your startup's bank account details are verified, funds are typically processed and transferred to your account within 3-5 business days, ensuring timely access to your capital."
+            },
+            {
+                "question": "Can I upload my pitch deck and business plan to my fundraiser?",
+                "answer": "Yes, FundDreamz allows you to upload various documents, including your pitch deck, business plan, financial models, and any relevant legal documents, to provide comprehensive information to potential investors."
+            },
+            {
+                "question": "How much of the money raised will my startup keep?",
+                "answer": "FundDreamz charges no platform fees for startup fundraisers, ensuring your startup retains more of the capital you raise to invest directly into your growth. Standard payment processing fees (typically around 2.9% + ₦0.30 per transaction) will be applied by our payment processor."
+            },
+            {
+                "question": "What kind of verification is needed for startup fundraisers?",
+                "answer": "To ensure credibility and trust for investors, FundDreamz may require verification of your business registration, founder identities, and details of your startup's operational status. Transparency through regular project updates and financial reporting is also encouraged."
+            }
+            ],
+            "moreFAQsLink": "#"
+        },
+        "whyStartSection": {
+            "title": "Why start a Startup Fundraiser on FundDreamz?",
+            "description": "Launching a startup fundraiser on FundDreamz offers an innovative and accessible path to securing crucial capital at every stage of your journey. As a trusted community-powered fundraising platform, FundDreamz empowers entrepreneurs to connect directly with a diverse pool of potential investors, from friends and family to angel investors and venture capitalists. Whether you're seeking pre-seed capital for concept validation, seed funding for MVP development, or Series A for market expansion, FundDreamz provides user-friendly tools, secure processing, and a transparent environment to help your startup achieve its dreams and scale new heights."
+        },
+        "callToActionBottom": {
+            "text": "Start your Dream",
+            "link": "#"
+        }
+    }
+]

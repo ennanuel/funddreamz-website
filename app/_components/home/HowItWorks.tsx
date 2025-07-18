@@ -4,13 +4,13 @@ import { FaArrowRight, FaPlay } from "react-icons/fa";
 export default function HowItWorks() {
 
     return (
-        <div className="bg-gray-50 px-10">
+        <div className="bg-white px-10">
             <section className="mx-auto max-w-lg min-h-screen py-24 flex flex-col gap-12">
                 <div className="flex justify-between items-center gap-6">
                     <h2 className="font-bold tracking-tighter text-6xl"><span className="text-dark-green">How FundDreamz works</span></h2>
                 </div>
                 <div className="flex rounded-4xl overflow-hidden bg-light-green p-2">
-                    <div className="relative w-full aspect-video max-h-[90vh] rounded-3xl overflow-hidden">
+                    <div className="relative w-full aspect-video max-h-[90vh] rounded-3xl rounded-br-md overflow-hidden">
                         <Image src="/home/video-image.jpg" alt="Video cover" fill className="object-cover block" />
                         <div className="relative w-full h-full flex items-center justify-center">
                             <button className="flex items-center justify-center gap-1 backdrop-blur bg-white hover:bg-light-green hover:text-dark-green text-dark-green rounded-full p-2 pr-6">

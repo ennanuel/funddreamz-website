@@ -20,7 +20,7 @@ export default function Description2() {
     const borderRadius = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
     return (
-        <div ref={descriptionRef} className="bg-gray-50">
+        <div ref={descriptionRef} className="bg-white">
             <motion.div 
                 style={{ 
                     scale, 
