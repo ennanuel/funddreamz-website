@@ -61,13 +61,13 @@ function CategorySlider({ x }: { x: MotionValue }) {
             {
                 CATEGORIES.map(({ title, Icon, iconBackground, textColor, href }) => (
                     <li key={title}>
-                        <Link draggable={false} href={`/category${href}`} className={`${textColor} bg-white overflow-hidden relative min-w-[280px] flex justify-between p-2 rounded-full`}>
+                        <Link draggable={false} href={`/category${href}`} className={`${textColor} bg-white overflow-hidden relative min-w-[240px] lg:min-w-[280px] flex justify-between p-2 rounded-full`}>
                             <div className="flex items-center gap-4">
-                                <span className={`relative flex items-center justify-center w-14 aspect-square rounded-full`}>
+                                <span className={`relative flex items-center justify-center w-12 lg:w-14 aspect-square rounded-full`}>
                                     <span className={`${iconBackground} absolute top-0 left-0 w-full h-full rounded-full scale-80 group-hover:scale-100 duration-500 transition-transform`} />
                                     <Icon size={20} className='relative' />
                                 </span>
-                                <span className="font-semibold text-xl tracking-tighter">{title}</span>
+                                <span className="font-semibold text-lg lg:text-xl tracking-tighter">{title}</span>
                             </div>
                         </Link>
                     </li>

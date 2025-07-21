@@ -62,10 +62,10 @@ export default function Demo() {
     }, [activeDemoIndex]);
 
     return (
-        <div className="bg-green-300 px-10 overflow-hidden">
+        <div className="bg-green-300 px-4 xs:px-6 sm:px-10 overflow-hidden">
             <section className="mx-auto max-w-lg w-full min-h-screen pt-25 flex justify-between gap-20">
                 <AnimatePresence mode="wait">
-                    <div className="pb-20 flex-1 flex flex-col gap-6 justify-end">
+                    <div className="pb-20 flex-1 hidden lg:flex flex-col gap-6 justify-end">
                         <div className="flex flex-col gap-10">
                             <div className="overflow-hidden">
                                 <motion.h3 
@@ -74,7 +74,7 @@ export default function Demo() {
                                     initial="hide"
                                     exit="hide"
                                     animate="show"
-                                    className="font-bold text-2xl tracking-tighter"
+                                    className="font-bold text-xl lg:text-2xl tracking-tighter"
                                 >
                                     <span className="text-green-900">{activeDemo.title}</span>
                                 </motion.h3>
@@ -86,7 +86,7 @@ export default function Demo() {
                                     initial="hide"
                                     exit="hide"
                                     animate="show"
-                                    className="font-semibold max-w-[20ch] text-5xl tracking-tighter"
+                                    className="font-semibold max-w-[20ch] text-3xl lg:text-5xl tracking-tighter"
                                 >
                                     <span className="text-green-900/70">{activeDemo.description}</span>
                                 </motion.p>
@@ -94,30 +94,31 @@ export default function Demo() {
                         </div>
                         {
                             activeDemo.extraTips ? 
-                                <motion.span 
+                                <motion.a 
                                     key={activeDemoIndex}
                                     variants={opacityVariants}
                                     initial="hide"
                                     exit="hide"
                                     animate="show"
+                                    href="#tips"
                                     className="font-semibold tracking-tighter text-green-900/70"
-                                >Get tips for start your <a href="#" className="underline">fundraiser</a></motion.span> :
+                                >Get tips for start your <a href="#" className="underline">fundraiser</a></motion.a> :
                                 null
                         }
                     </div>
                 </AnimatePresence>
-                <div className="flex-1 flex justify-end gap-6">
-                    <div className="relative h-full w-full max-w-[400px] flex flex-col justify-end gap-6">
+                <div className="flex-1 flex items-center lg:items-start justify-center lg:justify-end gap-6">
+                    <div className="relative h-full w-full max-w-[360px] lg:max-w-[400px] flex flex-col justify-end gap-6">
                         <ul className="flex items-center gap-1">
                             {
                                 DEMOS.map(({ Icon, title, shortTitle }, index) => (
                                     <li key={title}>
                                         <button 
                                             onClick={() => selectActiveDemo(index)} 
-                                            className={`${index === activeDemoIndex ? 'text-green-900' : 'text-green-900/60'} relative overflow-hidden flex gap-2 items-center justify-center h-10 px-4 hover:bg-green-900/10 rounded-full`}
+                                            className={`${index === activeDemoIndex ? 'text-green-900' : 'text-green-900/60'} relative overflow-hidden flex gap-2 items-center justify-center h-9 lg:h-10 px-4 hover:bg-green-900/10 rounded-full`}
                                         >
                                             <Icon size={20} />
-                                            <span className="font-semibold tracking-tighter text-lg">{shortTitle}</span>
+                                            <span className="font-semibold tracking-tighter text-base lg:text-lg">{shortTitle}</span>
                                             {
                                                 activeDemoIndex === index ?
                                                     <motion.span 
@@ -133,8 +134,51 @@ export default function Demo() {
                                 ))
                             }
                         </ul>
-                        <div className="flex flex-col relative w-full flex-1 max-h-[640px] bg-black  rounded-t-4xl pb-0 pt-8 px-2">
-                            <div className="absolute top-0 right-[calc(100%_+_20px)]">
+                        <AnimatePresence mode="wait">
+                            <div className="mt-12 mb-10 flex-1 flex flex-col gap-6 justify-end">
+                                <div className="flex flex-col gap-10">
+                                    <div className="overflow-hidden">
+                                        <motion.h3 
+                                            key={activeDemoIndex}
+                                            variants={opacityVariants}
+                                            initial="hide"
+                                            exit="hide"
+                                            animate="show"
+                                            className="font-bold text-base sm:text-xl lg:text-2xl tracking-tighter"
+                                        >
+                                            <span className="text-green-900">{activeDemo.title}</span>
+                                        </motion.h3>
+                                    </div>
+                                    <div className="overflow-hidden">
+                                        <motion.p 
+                                            key={activeDemoIndex}
+                                            variants={opacityVariants}
+                                            initial="hide"
+                                            exit="hide"
+                                            animate="show"
+                                            className="font-semibold max-w-[20ch] text-xl sm:text-3xl lg:text-5xl tracking-tighter"
+                                        >
+                                            <span className="text-green-900/70">{activeDemo.description}</span>
+                                        </motion.p>
+                                    </div>
+                                </div>
+                                {
+                                    activeDemo.extraTips ? 
+                                        <motion.a 
+                                            key={activeDemoIndex}
+                                            variants={opacityVariants}
+                                            initial="hide"
+                                            exit="hide"
+                                            animate="show"
+                                            href="#tips"
+                                            className="text-xs sm:text-sm md:text-base font-semibold tracking-tighter text-green-900/70"
+                                        >Get tips for start your <a href="#" className="underline">fundraiser</a></motion.a> :
+                                        null
+                                }
+                            </div>
+                        </AnimatePresence>
+                        <div className="flex flex-col relative w-full min-h-[400px] flex-1 max-h-[640px] bg-black  rounded-t-4xl pb-0 pt-8 px-2">
+                            <div className="absolute top-10 sm:top-0 right-4 sm:right-[calc(100%_+_20px)]">
                                 <button className="flex items-center justify-center w-10 aspect-square rounded-full text-dark-green hover:bg-dark-green hover:text-green-200">
                                     <FaPlay size={16} className="-mr-0.5" />
                                 </button>

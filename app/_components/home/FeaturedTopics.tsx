@@ -7,16 +7,16 @@ import { FaAngleRight } from "react-icons/fa6";
 export default function FeaturedTopics() {
 
     return (
-        <div className="px-10 bg-purple-300 text-purple-600">
+        <div className="px-4 xs:px-6 sm:px-10 bg-purple-300 text-purple-600">
             <section className="min-h-screen w-full max-w-lg mx-auto pt-25 pb-30">
-                <h2 className="text-6xl font-bold tracking-tighter">
+                <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tighter">
                     <span className="text-purple-900/70">Featured topics</span>
                 </h2>
-                <ul className="mt-10 grid grid-cols-3 grid-rows-2 gap-5">
+                <ul className="mt-10 grid grid-cols-1 lg:grid-cols-3 grid-rows-4 lg:grid-rows-2 gap-4 lg:gap-5">
                     {
                         TOPICS.map(({ title, description, image, cta, isUrgent }, index) => (
-                            <li key={title} className={`${index === 0 ? 'col-span-3 row-span-1' : 'col-span-1 row-span-1'} flex`}>
-                                <Link href="" className={`${index === 0 ? 'grid-cols-2 gap-13' : 'grid-cols-1 gap-8'} group grid p-4 flex-1 rounded-2xl overflow-hidden bg-gray-100`}>
+                            <li key={title} className={`${index === 0 ? 'lg:col-span-3 row-span-1' : 'col-span-1 row-span-1'} flex`}>
+                                <Link href="" className={`${index === 0 ? 'grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-13' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-8'} group grid p-2 lg:p-4 flex-1 rounded-2xl overflow-hidden bg-gray-100`}>
                                     <div className="relative p-4 min-h-[160px] bg-gray-200 rounded-xl overflow-hidden">
                                         <Image src={image} alt={title} fill className="object-cover block" />
                                         {
@@ -25,14 +25,10 @@ export default function FeaturedTopics() {
                                                 null
                                         }
                                     </div>
-                                    <div className={`${index === 0 ? 'justify-center' : ''} flex flex-col justify-between gap-6`}>
+                                    <div className={`${index === 0 ? 'lg:justify-center' : 'justify-center lg:justify-between'} py-4 px-4 lg:px-0 lg:py-0 flex flex-col justify-between gap-0 sm:gap-6`}>
                                         <div className="flex flex-col gap-6">
                                             <h3><span className="font-semibold text-xl tracking-tighter">{title}</span></h3>
-                                            {
-                                                index === 0 ?
-                                                    <p><span className="tracking-tighter font-semibold">{description}</span></p> :
-                                                    null
-                                            }
+                                            <p><span className={`${index == 0 ? 'hidden sm:block' : 'hidden sm:block lg:hidden'} tracking-tighter font-semibold`}>{description}</span></p>
                                         </div>
                                         <span className="w-fit h-8 rounded-full flex items-center justify-center gap-3 pl-4 pr-2 -translate-x-4 text-gray-800 group-hover:bg-white group-hover:text-purple-600 group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(.3,_1,_.16,_1)]">
                                             <span className="text-sm font-semibold tracking-tighter whitespace-nowrap">{cta}</span>
@@ -47,4 +43,4 @@ export default function FeaturedTopics() {
             </section>
         </div>
     )
-}
+};

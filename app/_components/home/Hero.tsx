@@ -79,44 +79,44 @@ export default function HomeHero() {
     }, [activeIndex, categories]);
 
     return (
-        <section className="px-10">
-            <div className="mx-auto max-w-lg pt-12 pb-16 md:pt-0 md:min-h-[calc(100vh_-_64px)] flex flex-col-reverse lg:flex-row lg:gap-20 lg:items-end">
+        <section className="px-4 xs:px-6 sm:px-10">
+            <div className="mx-auto max-w-lg pt-20 pb-14 min-h-[calc(100vh_-_64px)] flex flex-col-reverse lg:flex-row gap-20 justify-center lg:justify-center items-center lg:items-end">
                 <div className="flex flex-col items-center lg:items-start justify-center">
-                    <h1 className="text-[4rem] leading-[4.6rem] font-bold tracking-tighter">
+                    <h1 className="text-center lg:text-left text-[2.8rem] xl:text-[4rem] leading-[3.2rem] xl:leading-[4.6rem] font-bold tracking-tighter">
                         <span>The journey </span><br />
                         <span>to your Dream</span><br />
                         <span>starts here.</span>
                     </h1>
-                    <p className="mt-4 font-semibold tracking-tighter text-left text-xl max-w-[40ch]">
+                    <p className="text-center lg:text-left mt-4 font-semibold tracking-tighter text-base xl:text-xl max-w-[40ch]">
                         <span className="text-gray-500">FundDreamz is a platform that connects dreamers with backers, providing a space where dreams can thrive. Our mission is to make fundraising accessible to anyone with a dream and passion to pursue.</span>
                     </p>
-                    <a href={CREATE_FUNDRAISER_LINK} className="mt-8 h-12 flex items-center justify-center rounded-full px-6 sm:px-10 bg-green-400 outline-3 outline-dark-green text-dark-green w-fit min-w-50 sm:min-w-60">
-                        <span className="tracking-tighter font-semibold whitespace-nowrap">Start your Dream</span>
+                    <a href={CREATE_FUNDRAISER_LINK} className="mt-8 h-12 flex items-center justify-center rounded-full px-10 bg-green-400 outline-3 outline-dark-green text-dark-green w-fit min-w-50 xl:min-w-60">
+                        <span className="text-sm tracking-tighter font-semibold whitespace-nowrap">Start your Dream</span>
                     </a>
-                    <ul className="mt-8 flex items-center gap-6">
+                    <ul className="mt-8 flex items-center gap-4 xl:gap-6">
                         {
                             BADGES.map(({ title, Icon }) => (
                                 <li key={title} className="flex items-center justify-center gap-2 text-gray-400">
                                     <Icon size={16} />
-                                    <span className="text-xs">{title}</span>
+                                    <span className="text-xs whitespace-nowrap">{title}</span>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
-                <div className="hidden sm:flex md:flex-1">
+                <div className="hidden lg:block flex-1">
                     <ul 
                         ref={categoriesCarouselRef}
-                        className="w-full h-full flex justify-center lg:justify-end gap-3"
+                        className="w-full h-full flex justify-end gap-3"
                     >
                         {
-                            categories.map(({ title, href, image }, index) => (
+                            categories.map(({ title, description, href, image }, index) => (
                                 <motion.li 
                                     key={title} 
                                     animate={{ width: categoryWidths[index] }}
                                     onMouseOver={() => selectActiveIndex(index)}
                                     onMouseOut={startInterval}
-                                    className={`${index === activeIndex ? 'rounded-[24px]' : 'rounded-[40px]'} transition-[border-radius] duration-500 ease-expo min-h-40 md:min-h-50 h-[480px] overflow-hidden`}
+                                    className={`${index === activeIndex ? 'rounded-[24px]' : 'rounded-[40px]'} transition-[border-radius] duration-500 ease-expo min-h-50 h-[240px] lg:h-[440px] xl:h-[480px] overflow-hidden`}
                                     transition={{ ease: [0.3, 1, 0.16, 1], duration: 1 }}
                                 >
                                     <Link 
@@ -131,24 +131,24 @@ export default function HomeHero() {
                                                     opacity: index === activeIndex ? 1 : 0
                                                 }} 
                                                 transition={{ duration: 1, ease: [0.3, 1, 0.16, 1] }} 
-                                                className="origin-top-left flex items-center justify-center w-8 sm:w-10 md:w-14 aspect-square rounded-full bg-black/40 backdrop-blur text-white"
+                                                className="origin-top-left flex items-center justify-center w-12 xl:w-14 aspect-square rounded-full bg-black/40 backdrop-blur text-white"
                                             >
                                                 <HiOutlineArrowUpRight size={20} />
                                             </motion.span>
                                             <AnimatePresence initial={false} mode="wait">
                                                 {
                                                     index === activeIndex ?
-                                                        <motion.div key={`${title}-active`} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col gap sm:gap-2">
+                                                        <motion.div key={`${title}-active`} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col gap-2">
                                                             <h3>
-                                                                <span className="text-white block text-base sm:text-lg md:text-xl lg:text-4xl tracking-tighter">{title}</span>
+                                                                <span className="text-white block text-3xl xl:text-4xl tracking-tighter">{title}</span>
                                                             </h3>
-                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-xs lg:text-sm min-w-[24ch]">
-                                                                <span className="text-gray-300 max-w-[24ch]">More than $50 million is raised every week on GoFundMe.*</span>
+                                                            <motion.p initial={{ maxHeight: 0 }} animate={{ maxHeight: 99999 }} className="text-sm min-w-[24ch]">
+                                                                <span className="text-gray-300 max-w-[24ch]">{description}</span>
                                                             </motion.p>
                                                         </motion.div> :
                                                         <motion.div key={title} variants={CATEGORY_VARIANTS} initial="exit" animate="enter" exit="exit" className="flex flex-col items-center w-full">
                                                             <h3>
-                                                                <span className="lg:-rotate-90 lg:w-[2.25rem] whitespace-nowrap tracking-tight text-white block text-base sm:text-lg md:text-xl lg:text-4xl">{title}</span>
+                                                                <span className="-rotate-90 w-[2.25rem] whitespace-nowrap tracking-tight text-white block text-3xl xl:text-4xl">{title}</span>
                                                             </h3>
                                                         </motion.div>
                                                 }

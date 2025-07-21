@@ -7,11 +7,11 @@ export default function SubHeader({ subLinks, href, article, isGrid, index, open
     return (
         <div 
             id={`sub-header-${index}`} 
-            className="sub-header absolute top-full left-0 hidden w-full h-[calc(100dvh_-_64px)] overflow-y-auto bg-white text-gray-800  px-10"
+            className="sub-header absolute top-full left-0 hidden w-full h-[calc(100dvh_-_64px)] overflow-y-auto bg-white text-gray-800 px-10"
             onMouseOver={openSubHeader}
             onMouseOut={closeSubHeader}
         >
-            <div className="mx-auto max-w-lg w-full h-full flex gap-10 overflow-x-clip">
+            <div className={`${article ? 'grid-cols-2' : 'grid-cols-1'} mx-auto max-w-lg w-full h-full flex gap-10 overflow-x-clip`}>
                 <ul className={`${isGrid ? 'grid grid-cols-3 gap-6' : 'flex flex-col gap-5'} flex-1 h-fit pt-20 pb-10`}>
                     {
                         subLinks?.map((subLink) => (
@@ -27,7 +27,7 @@ export default function SubHeader({ subLinks, href, article, isGrid, index, open
                 </ul>
                 {
                     article ?
-                        <div className="flex-1 pt-20 pb-10 flex">
+                        <div className="hidden flex-1 pt-20 pb-10">
                             <article className="w-full flex flex-col justify-start">
                                 <div className="relative mb-6 w-full aspect-video">
                                     <Image src={article.image} alt={article.title} fill className="block object-cover rounded-2xl" />

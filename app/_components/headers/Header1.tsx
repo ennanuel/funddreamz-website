@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
@@ -13,7 +13,9 @@ import SubHeader from "./SubHeader";
 
 import { LINKS } from "../../_assets/data/header";
 import { changeHeaderColors, revertHeaderColorsToDefault } from '../../_utils/header';
-import { SIGN_UP_LINK } from "@/app/_assets/data/links";
+import { SIGN_IN_LINK, SIGN_UP_LINK } from "@/app/_assets/data/links";
+import { MdClose, MdMoreHoriz } from "react-icons/md";
+import MobileHeaderMenu from "./MobileHeaderMenu1";
 
 const ALT_HEADER_COLORS = {
     '--background': '#ffffff',
@@ -28,6 +30,10 @@ const ALT_HEADER_COLORS = {
 export default function Header() {
     const headerRef = useRef<HTMLHeadElement>(null);
     const subHeaderIsOpen = useRef<boolean>(false);
+
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const openMobileMenu = () => setShowMobileMenu(true);
+    const closeMobileMenu = () => setShowMobileMenu(false);
 
     const { scrollY } = useScroll();
 
@@ -82,15 +88,15 @@ export default function Header() {
         <header 
             ref={headerRef}
             id="page-header"
-            className="z-10 px-8 bg-[var(--background)] sticky top-0 transition-transform ease-expo duration-1000"
+            className="z-10 px-3 xs:px-4 sm:px-8 bg-[var(--background)] sticky top-0 transition-transform ease-expo duration-1000"
         >
-            <nav className="mx-auto h-16 max-w-lg gap-10 flex items-center justify-between">
+            <nav className="mx-auto h-12 sm:h-16 max-w-lg gap-6 lg:gap-10 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="-mt-1 flex gap-1 items-center justify-center">
-                        <Image src="/favicon.svg" width={40} height={40} alt="Fund dreams logo" className="w-10 aspect-square block object-cover border-2 border-[#07fb08] rounded-full" />
-                        <Image src="/logo-cover.png" alt="Logo cover" width={160} height={64} className="h-8 w-auto object-cover" />
+                        <Image src="/favicon.svg" width={40} height={40} alt="Fund dreams logo" className="min-w-8 sm:min-w-10 w-8 sm:w-10 aspect-square block object-cover border-2 border-[#07fb08] rounded-full" />
+                        <Image src="/logo-cover.png" alt="Logo cover" width={160} height={64} className="h-6 sm:h-8 w-auto object-cover block lg:hidden xl:block" />
                     </Link>
-                    <ul className="flex items-center">
+                    <ul className="hidden lg:flex items-center">
                         {
                             LINKS.map((link, index) => (
                                 <li key={link.title}>
@@ -101,9 +107,9 @@ export default function Header() {
                                                 id={`nav-link-${index}`} 
                                                 onMouseOver={() => openSubHeader(index)} 
                                                 onMouseOut={closeSubHeader} 
-                                                className="nav-link px-3 h-16 flex items-center justify-center text-[var(--text-color)]"
+                                                className="nav-link px-2 lg:px-3 h-16 flex items-center justify-center text-[var(--text-color)]"
                                             >
-                                                <span className="font-semibold">{link.title}</span>
+                                                <span className="font-semibold text-sm lg:text-base">{link.title}</span>
                                             </button>
                                             <SubHeader
                                                 {...link}
@@ -112,8 +118,8 @@ export default function Header() {
                                                 closeSubHeader={closeSubHeader}
                                             />
                                             </> :
-                                            <Link href={link.href} className="nav-link px-3 flex items-center justify-center hover:underline text-[var(--text-color)]">
-                                                <span className="font-semibold">{link.title}</span>
+                                            <Link href={link.href} className="nav-link px-2 lg:px-3 flex items-center justify-center hover:underline text-[var(--text-color)]">
+                                                <span className="font-semibold text-sm lg:text-base">{link.title}</span>
                                             </Link>
                                     }
                                 </li>
@@ -121,23 +127,33 @@ export default function Header() {
                         }
                     </ul>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="hidden lg:flex items-center gap-3 lg:gap-6">
                     <div className="flex items-center bg-[var(--search-background)] rounded-full text-[var(--text-color)]">
-                        <input type="text" className="px-4 min-w-30 bg-transparent border-none focus:outline-none tracking-tighter h-10 placeholder:text-[var(--text-color)] text-[var(--text-color)_!important]" placeholder="Search" />
+                        <input type="text" className="px-4 max-w-[200px] lg:max-w-none min-w-30 bg-transparent border-none focus:outline-none text-sm lg:text-base tracking-tighter h-10 placeholder:text-[var(--text-color)] text-[var(--text-color)_!important]" placeholder="Search" />
                         <button className="flex items-center justify-center w-8 mr-1 aspect-square rounded-full hover:bg-[var(--main)]/20 hover:text-[var(--main)]">
                             <BiSearch size={16} />
                         </button>
                     </div>
-                    <div className="hidden lg:flex items-center gap-2">
-                        <Link href="/sign-in" className="px-6 rounded-full h-10 hover:bg-[var(--secondary)] text-[var(--main)] flex items-center justify-center">
-                            <span className="font-semibold">Sign in</span>
-                        </Link>
-                        <a href={SIGN_UP_LINK} className="flex items-center justify-center px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">
-                            <span className="font-semibold">Start a Dream</span>
+                    <div className="flex items-center gap-2">
+                        <a href={SIGN_IN_LINK} className="px-4 sm:px-6 rounded-full h-10 hover:bg-[var(--secondary)] text-[var(--main)] flex items-center justify-center">
+                            <span className="font-semibold whitespace-nowrap text-sm lg:text-base">Sign in</span>
+                        </a>
+                        <a href={SIGN_UP_LINK} className="flex items-center justify-center px-4 sm:px-6 rounded-full h-10 bg-[var(--main)] text-[var(--secondary)]">
+                            <span className="font-semibold whitespace-nowrap text-sm lg:text-base">Start a Dream</span>
                         </a>
                     </div>
                 </div>
+                <div className="flex lg:hidden items-center justify-center">
+                    <button onClick={showMobileMenu ? closeMobileMenu : openMobileMenu} className="flex items-center justify-center w-8 sm:w-10 aspect-square rounded-full bg-dark-green text-light-green">
+                        {
+                            showMobileMenu ?
+                                <MdClose size={20} /> :
+                                <MdMoreHoriz size={20} />
+                        }
+                    </button>
+                </div>
             </nav>
+            <MobileHeaderMenu show={showMobileMenu} open={openMobileMenu} close={closeMobileMenu} />
         </header>
     )
 }

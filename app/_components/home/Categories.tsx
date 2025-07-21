@@ -13,12 +13,12 @@ import { CATEGORIES_2 } from "../../_assets/data";
 export default function Categories() {
 
     return (
-        <div className="bg-white px-10">
+        <div className="bg-white px-4 xs:px-6 sm:px-10">
             <section className="mx-auto max-w-lg w-full min-h-screen pt-24 pb-20 flex flex-col">
                 <div className="flex flex-col gap-4">
-                    <h2 className="font-bold text-6xl tracking-tighter"><span className="text-gray-800">Fundraise for anyone</span></h2>
+                    <h2 className="font-bold text-3xl sm:text-4xl lg:text-6xl tracking-tighter"><span className="text-gray-800">Fundraise for anyone</span></h2>
                 </div>
-                <ul className="flex-1 mt-20 grid grid-cols-3 gap-4">
+                <ul className="flex-1 mt-20 grid grid-cols-1 md:grid-cols-3 gap-4">
                     {
                         CATEGORIES_2.map((category) => (
                             <li key={category.title} className="flex">
@@ -27,7 +27,7 @@ export default function Categories() {
                         ))
                     }
                 </ul>                    
-                <p className="mt-10 text-lg font-semibold tracking-tighter">
+                <p className="mt-10 text-xs sm:text-sm lg:text-lg font-semibold tracking-tighter">
                     <span className="text-gray-500">Pick a category that best fits you fundraising goal.</span>
                 </p>
             </section>
@@ -75,16 +75,16 @@ function Category({ title, description, iconBackground, background, Icon }: Cate
             >
                 <motion.div 
                     style={{ transform: rotate, willChange: 'transform', transformStyle: 'preserve-3d' }} 
-                    className={`${background} border-2 border-gray-100 w-full h-full min-h-[480px] relative p-6 flex flex-col rounded-4xl overflow-hidden justify-between gap-6 not-[:hover]:transition-transform not-[:hover]:duration-500 not-[:hover]:ease-expo`}>
+                    className={`${background} w-full h-full min-h-[200px] sm:min-h-[240px] md:min-h-[320px] lg:min-h-[480px] max-h-[480px] relative p-4 lg:p-6 flex flex-col rounded-2xl lg:rounded-4xl overflow-hidden justify-between gap-6 not-[:hover]:transition-transform not-[:hover]:duration-500 not-[:hover]:ease-expo`}>
                     <div className={`${iconBackground} flex items-center justify-center w-16 aspect-square rounded-full`}>
                         <Icon size={32} className={`text-black`} />
                     </div>
-                    <div className="relative flex flex-col gap-4">
+                    <div className="relative flex flex-col gap-2 sm:gap-4">
                         <h2>
-                            <span className="text-black/80 text-4xl font-semibold tracking-tighter">{title}</span>
+                            <span className="text-black/80 text-xl sm:text-2xl lg:text-4xl font-semibold tracking-tighter">{title}</span>
                         </h2>
                         <p>
-                            <span className="text-black/50 font-semibold opacity-60 text-xl tracking-tighter">{description}</span>
+                            <span className="text-black/50 font-semibold opacity-60 text-sm sm:text-base lg:text-xl tracking-tighter">{description}</span>
                         </p>
                     </div>
                 </motion.div>
