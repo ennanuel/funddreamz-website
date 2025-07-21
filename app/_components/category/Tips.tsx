@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { FaArrowRight, FaEarListen, FaQrcode } from "react-icons/fa6";
 import { RiMicAiLine } from "react-icons/ri";
-import { motion, PanInfo, useMotionValue, ResolvedValues, useTransform } from 'framer-motion';
+import { motion, useMotionValue, ResolvedValues, useTransform } from 'framer-motion';
 
 interface Tip {
     heading: string;

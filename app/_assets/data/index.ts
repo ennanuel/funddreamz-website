@@ -1,14 +1,13 @@
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { BiSolidBriefcase } from "react-icons/bi";
-import { BsCalendar2EventFill } from "react-icons/bs";
 import { FaDonate, FaHandHoldingHeart, FaHandsHelping, FaTools } from "react-icons/fa";
-import { FaBriefcase, FaHandshake, FaLandmarkDome, FaLightbulb, FaMonument, FaPeopleGroup, FaPersonBreastfeeding, FaTrophy } from "react-icons/fa6";
-import { GiAfrica, GiHealthCapsule, GiPrayer, GiReceiveMoney, GiSoccerBall } from "react-icons/gi";
+import { FaHandshake, FaPersonBreastfeeding } from "react-icons/fa6";
+import { GiAfrica, GiHealthCapsule } from "react-icons/gi";
 import { HiOutlineLightBulb, HiOutlinePencil } from "react-icons/hi2";
 import { IoIosSchool } from "react-icons/io";
-import { MdFamilyRestroom, MdPets, MdSchool, MdVolunteerActivism } from "react-icons/md";
+import { MdFamilyRestroom, MdPets } from "react-icons/md";
 import { PiHandHeartLight } from "react-icons/pi";
-import { TbMedicalCross, TbPlant2, TbSailboat } from "react-icons/tb";
+import { TbMedicalCross } from "react-icons/tb";
 import { child1, church1, dog1, dog2, family1, family2, family3, farm1, friends1, girl1, graduation1, graduation2, momAndChild1, officer1, protest1 } from "../images/category-fundraisers";
 import { board, peopleSharing } from "../images";
 

@@ -1,7 +1,6 @@
 
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { PiPlantFill } from "react-icons/pi";
 import { TbArrowUpRight } from "react-icons/tb";
 
 import { LINKS_2 } from "../../_assets/data/footer";

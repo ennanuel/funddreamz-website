@@ -44,12 +44,6 @@ const LINKS = [
     }
 ];
 
-const STEP_ELEMENTS = [
-    Tools,
-    Share,
-    Payment
-];
-
 
 export default function LinksAndSteps({ howItWorks, callToActionMiddle }: LinksAndStepsProps) {
 
