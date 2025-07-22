@@ -10,8 +10,6 @@ import { FaArrowDown, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { FUNDRAISERS } from "../../_assets/data";
 
 
-const SCREEN_SIZES = {};
-
 export default function Discover() {
     const carousel = useRef<HTMLUListElement>(null);
     const [carouselWidth, setCarouselWidth] = useState(0);

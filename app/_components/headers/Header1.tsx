@@ -41,7 +41,7 @@ export default function Header() {
         const previousScrollY = Number(scrollY.getPrevious());
         const currentScrollY = Number(scrollY.get());
 
-        if(!subHeaderIsOpen.current && previousScrollY < currentScrollY && currentScrollY > 100) {
+        if(!subHeaderIsOpen.current && previousScrollY < currentScrollY && currentScrollY > 100 && (window.innerWidth < 1024 && !showMobileMenu)) {
             headerRef.current?.classList?.remove('translate-y-0');
             headerRef.current?.classList?.add('-translate-y-full');
         } else {

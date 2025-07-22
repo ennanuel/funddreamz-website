@@ -1,17 +1,35 @@
+"use client";
+
 import { LINKS } from "@/app/_assets/data/header";
 import { SIGN_UP_LINK } from "@/app/_assets/data/links";
 import Link from "next/link";
+import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
-import { FiArrowDown } from "react-icons/fi";
+import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
 
 
 interface MobileHeaderMenuProps {
     show: boolean;
     open: () => void;
     close: () => void;
-}
+};
 
-export default function MobileHeaderMenu({ show, open, close }: MobileHeaderMenuProps) {
+interface SubLinkProps {
+    title: string;
+    href: string;
+    isExternalLink: boolean;
+    close: () => void;
+};
+
+export default function MobileHeaderMenu({ show, close }: MobileHeaderMenuProps) {
+    const [expandedLinkIndex, setExpandedLinkIndex] = useState(-1);
+
+    const selectLinkIndexToExpand = (index: number) => {
+        setExpandedLinkIndex(index);
+    };
+    const collapseExpandedLink = () => {
+        setExpandedLinkIndex(-1);
+    };
 
     if (!show) return;
 
@@ -25,17 +43,36 @@ export default function MobileHeaderMenu({ show, open, close }: MobileHeaderMenu
             </div>
             <ul className="py-8 flex-1 flex flex-col">
                 {
-                    LINKS.map(({ title, href, subLinks }) => (
+                    LINKS.map(({ title, href, subLinks }, index) => (
                         <li key={title} className="flex flex-col gap-4">
                             {
                                 subLinks?.length ?
-                                    <button className="flex items-center justify-between h-12 gap-4">
-                                        <span className="text-2xl font-semibold tracking-tighter">{title}</span>
-                                        <FiArrowDown size={16} />
-                                    </button> :
-                                    <a href={href} className="flex items-center h-12">
+                                    <div className="flex flex-col">
+                                        <button
+                                            onClick={() => expandedLinkIndex === index ? collapseExpandedLink() : selectLinkIndexToExpand(index)} 
+                                            className="flex items-center justify-between h-12 gap-4"
+                                        >
+                                            <span className="text-2xl font-semibold tracking-tighter">{title}</span>
+                                            <FiArrowDown size={16} />
+                                        </button>
+                                        {
+                                            expandedLinkIndex === index ? 
+                                                <ul className="flex flex-col">
+                                                    {
+                                                        subLinks.map((subLink) => (
+                                                            <SubLink key={subLink.title} close={close} {...subLink} />
+                                                        ))
+                                                    }
+                                                </ul> :
+                                                null
+                                        }
+                                    </div> :
+                                    <a  onClick={close} href={href} className="flex items-center h-12">
                                         <span className="text-2xl font-semibold tracking-tighter">{title}</span>
                                     </a>
+                            }
+                            {
+
                             }
                         </li>
                     ))
@@ -52,5 +89,23 @@ export default function MobileHeaderMenu({ show, open, close }: MobileHeaderMenu
                 </div>
             </div>
         </nav>
+    )
+};
+
+function SubLink({ title, href, isExternalLink, close }: SubLinkProps) {
+
+    return (
+        <li className="" onClick={close}>
+            {
+                isExternalLink ?
+                    <a href={href} className="flex items-center justify-between py-2 h-10 border-b border-black/20">
+                        <span className="text-xl font-semibold tracking-tighter">{title}</span>
+                        <FiArrowUpRight size={16} />
+                    </a> :
+                    <Link href={href} className="flex items-center justify-start py-2 h-10 border-b border-black/20">
+                        <span className="text-lg font-semibold tracking-tighter">{title}</span>
+                    </Link>
+            }
+        </li>
     )
 }
